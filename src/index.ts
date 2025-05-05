@@ -1,5 +1,5 @@
-import { DEFAULT_STAMP_OPTIONS } from "./index.constants";
-import type { StampOptions } from "./index.types";
+import type { StampOptions } from "@/index.types";
+import { DEFAULT_STAMP_OPTIONS } from "@/index.constants";
 
 function getStampOptions(options: Partial<StampOptions>): StampOptions {
   return {

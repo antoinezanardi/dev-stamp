@@ -1,4 +1,4 @@
-import type { StampOptions } from "./index.types";
+import type { StampOptions } from "@/index.types";
 
 const DEFAULT_STAMP_OPTIONS: StampOptions = {
   targetSelector: "body",

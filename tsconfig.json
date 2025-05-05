@@ -1,31 +1,39 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
     "declaration": true,
     "declarationMap": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "noEmit": false,
+    "outDir": "./dist",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@config/*": [
+        "./config/*"
+      ]
+    },
+    "resolveJsonModule": true,
+    "rootDir": "./src",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ESNext",
     "types": [
       "vitest/globals",
     ]
   },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
   "include": [
     "eslint.config.ts",
     "release.config.mjs",
     "src/**/*",
     "config/**/*"
   ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
 }

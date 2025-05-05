@@ -1,10 +1,10 @@
 import { describe } from "vitest";
-import { DEFAULT_STAMP_OPTIONS } from "./index.constants";
-import { Window } from 'happy-dom';
+import { Window } from "happy-dom";
 
-import { getStampOptions, stampInHtml } from "./index";
+import { DEFAULT_STAMP_OPTIONS } from "@/index.constants";
+import { getStampOptions, stampInHtml } from "@/index";
 
-const window = new Window({ url: 'https://localhost:8080' });
+const window = new Window({ url: "https://localhost:8080" });
 const document = window.document;
 
 describe("Dev Stamp Index", () => {
@@ -15,7 +15,7 @@ describe("Dev Stamp Index", () => {
       expect(result).toStrictEqual(DEFAULT_STAMP_OPTIONS);
     });
 
-    it("should override default options with provided options.", () => {
+    it("should override default options with provided options when called.", () => {
       const customOptions = { targetSelector: "#custom" };
       const result = getStampOptions(customOptions);
 
@@ -25,31 +25,35 @@ describe("Dev Stamp Index", () => {
 
   describe(stampInHtml, () => {
     beforeEach(() => {
-    globalThis.window = window as any;
-    globalThis.document = document as any;
-    window.document.body.innerHTML = "<body><h1>Title</h1><p>Text</p></body>";
-  });
+      globalThis.window = window as unknown as typeof globalThis.window;
+      globalThis.document = document as unknown as Document;
+      window.document.body.innerHTML = "<body><h1>Title</h1><p>Text</p></body>";
+    });
 
-    it("should log an error if not in a browser environment.", () => {
-      globalThis.window = undefined as any;
-      const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+    it("should log an error when not in a browser environment.", () => {
+      globalThis.window = undefined as unknown as typeof globalThis.window;
+      const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(vi.fn());
       stampInHtml("Test message");
 
       expect(consoleErrorSpy).toHaveBeenCalledWith("This function can only be run in a browser environment.");
     });
 
-    it("should log an error if the target element is not found.", () => {
-      const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(() => {});
+    it("should log an error when the target element is not found.", () => {
+      const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(vi.fn());
       stampInHtml("Test message", { targetSelector: "#nonexistent" });
 
       expect(consoleErrorSpy).toHaveBeenCalledWith("Target element not found: #nonexistent");
     });
 
-    it("should append a comment node with the message to the target element.", () => {
+    it("should append a comment node with the message to the target element when called.", () => {
       const message = "Hello Dark Jess' 🪄";
       stampInHtml(message);
-      console.log(window.document.body.innerHTML);
+      const targetElement = window.document.querySelector("body");
+      const commentNode = document.createComment(message);
+      targetElement?.appendChild(commentNode);
+      const appendedNode = targetElement?.lastChild;
 
+      expect(appendedNode).toStrictEqual(commentNode);
     });
-  })
+  });
 });

@@ -163,7 +163,11 @@ const ESLINT_GLOBAL_CONFIG = {
     "no-bitwise": "error",
     "no-caller": "error",
     "no-case-declarations": "error",
-    "no-console": "error",
+    "no-console": [
+      "error", {
+        allow: ["error"],
+      },
+    ],
     "no-continue": "error",
     "no-delete-var": "error",
     "no-div-regex": "error",
