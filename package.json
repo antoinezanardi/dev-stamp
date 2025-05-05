@@ -1,0 +1,38 @@
+{
+  "name": "dev-stamp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "💮 Stamp your dev footprint into HTML",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "npx eslint --config eslint.config.ts .",
+    "lint:fix": "npx eslint --config eslint.config.ts --fix .",
+    "lint:staged:fix": "lint-staged -c config/lint-staged/.lintstagedrc.eslint.json",
+    "lint:inspect-config": "npx @eslint/config-inspector",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "dev",
+    "footprint",
+    "stamp"
+  ],
+  "author": "Antoine ZANARDI",
+  "license": "MIT",
+  "packageManager": "pnpm@10.10.0",
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "@types/node": "^22.15.3",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vitest/coverage-v8": "^3.1.2",
+    "@vitest/eslint-plugin": "^1.1.43",
+    "eslint": "^9.25.1",
+    "eslint-import-resolver-typescript": "^4.3.4",
+    "eslint-plugin-import": "^2.31.0",
+    "happy-dom": "^17.4.4",
+    "jiti": "^2.4.2",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
+  }
+}
