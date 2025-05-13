@@ -6,6 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "prepare": "is-ci || husky",
+    "build": "tsup src/index.ts --dts --sourcemap --minify --clean --format esm,cjs --out-dir dist",
     "lint": "npx eslint --config eslint.config.ts .",
     "lint:fix": "npx eslint --config eslint.config.ts --fix .",
     "lint:staged:fix": "lint-staged -c config/lint-staged/.lintstagedrc.eslint.json",
@@ -48,6 +49,7 @@
     "rimraf": "^6.0.1",
     "semantic-release": "^24.2.3",
     "semantic-release-export-data": "^1.1.0",
+    "tsup": "^8.4.0",
     "typescript": "^5.8.3",
     "validate-branch-name": "^1.3.2",
     "vite-tsconfig-paths": "^5.1.4",
