@@ -1,39 +1,6 @@
 {
-  "name": "dev-stamp",
-  "version": "1.0.0",
-  "type": "module",
-  "description": "💮 Stamp your dev footprint into HTML",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "prepare": "is-ci || husky",
-    "build": "tsup --config config/tsup/tsup.config.ts",
-    "lint": "npx eslint --config eslint.config.ts .",
-    "lint:fix": "npx eslint --config eslint.config.ts --fix .",
-    "lint:staged:fix": "lint-staged -c config/lint-staged/.lintstagedrc.eslint.json",
-    "lint:inspect-config": "npx @eslint/config-inspector",
-    "test:unit": "cross-env NODE_ENV=test vitest --watch --config config/vitest/vitest.global-unit-tests-config.ts",
-    "test:unit:watch": "cross-env NODE_ENV=test vitest --watch --config config/vitest/vitest.global-unit-tests-config.ts",
-    "test:unit:cov": "cross-env NODE_ENV=test rimraf tests/unit/coverage && vitest --coverage --config config/vitest/vitest.global-unit-tests-config.ts",
-    "test:unit:staged": "lint-staged -c config/lint-staged/.lintstagedrc.unit-tests.json"
-  },
-  "keywords": [
-    "html",
-    "dev",
-    "footprint",
-    "stamp"
-  ],
-  "exports": {
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.cjs"
-  },
-  "files": [
-    "dist"
-  ],
   "author": "Antoine ZANARDI",
-  "license": "MIT",
-  "packageManager": "pnpm@10.10.0",
+  "description": "💮 Stamp your dev footprint into HTML",
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
@@ -63,5 +30,38 @@
     "validate-branch-name": "^1.3.2",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.1.2"
-  }
+  },
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "html",
+    "dev",
+    "footprint",
+    "stamp"
+  ],
+  "license": "MIT",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "name": "dev-stamp",
+  "packageManager": "pnpm@10.10.0",
+  "scripts": {
+    "prepare": "is-ci || husky",
+    "build": "tsup --config config/tsup/tsup.config.ts",
+    "lint": "npx eslint --config eslint.config.ts .",
+    "lint:fix": "npx eslint --config eslint.config.ts --fix .",
+    "lint:staged:fix": "lint-staged -c config/lint-staged/.lintstagedrc.eslint.json",
+    "lint:inspect-config": "npx @eslint/config-inspector",
+    "test:unit": "cross-env NODE_ENV=test vitest --watch --config config/vitest/vitest.global-unit-tests-config.ts",
+    "test:unit:watch": "cross-env NODE_ENV=test vitest --watch --config config/vitest/vitest.global-unit-tests-config.ts",
+    "test:unit:cov": "cross-env NODE_ENV=test rimraf tests/unit/coverage && vitest --coverage --config config/vitest/vitest.global-unit-tests-config.ts",
+    "test:unit:staged": "lint-staged -c config/lint-staged/.lintstagedrc.unit-tests.json"
+  },
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "version": "1.0.0"
 }
