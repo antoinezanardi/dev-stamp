@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "type": "module",
   "description": "💮 Stamp your dev footprint into HTML",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "is-ci || husky",
-    "build": "tsup src/index.ts --dts --sourcemap --minify --clean --format esm,cjs --out-dir dist",
+    "build": "tsup --config config/tsup/tsup.config.ts",
     "lint": "npx eslint --config eslint.config.ts .",
     "lint:fix": "npx eslint --config eslint.config.ts --fix .",
     "lint:staged:fix": "lint-staged -c config/lint-staged/.lintstagedrc.eslint.json",
@@ -21,6 +23,13 @@
     "dev",
     "footprint",
     "stamp"
+  ],
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
+  "files": [
+    "dist"
   ],
   "author": "Antoine ZANARDI",
   "license": "MIT",
