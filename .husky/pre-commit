@@ -1,0 +1,5 @@
+npx --no-install validate-branch-name;
+npm run lint:staged:fix;
+git add -A .;
+npm run typecheck;
+npm run test:unit:staged;
