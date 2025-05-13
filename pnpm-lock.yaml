@@ -59,6 +59,9 @@ importers:
       husky:
         specifier: ^9.1.7
         version: 9.1.7
+      is-ci:
+        specifier: ^4.1.0
+        version: 4.1.0
       jiti:
         specifier: ^2.4.2
         version: 2.4.2
@@ -1072,6 +1075,10 @@ packages:
     resolution: {integrity: sha512-OAlb+T7V4Op9OwdkjmguYRqncdlx5JiofwOAUkmTF+jNdHwzTaTs4sRAGpzLF3oOz5xAyDGrPgeIDFQmDOTiJw==, tarball: https://registry.npmjs.org/check-error/-/check-error-2.1.1.tgz}
     engines: {node: '>= 16'}
 
+  ci-info@4.2.0:
+    resolution: {integrity: sha512-cYY9mypksY8NRqgDB1XD1RiJL338v/551niynFTGkZOO2LHuB2OmOYxDIe/ttN9AHwrqdum1360G3ald0W9kCg==, tarball: https://registry.npmjs.org/ci-info/-/ci-info-4.2.0.tgz}
+    engines: {node: '>=8'}
+
   clean-stack@2.2.0:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==, tarball: https://registry.npmjs.org/clean-stack/-/clean-stack-2.2.0.tgz}
     engines: {node: '>=6'}
@@ -1850,6 +1857,10 @@ packages:
   is-callable@1.2.7:
     resolution: {integrity: sha512-1BC0BVFhS/p0qtw6enp8e+8OD0UrK0oFLztSjNzhcKA3WDuJxxAPXzPuPtKkjEY9UUoEWlX/8fgKeu2S8i9JTA==, tarball: https://registry.npmjs.org/is-callable/-/is-callable-1.2.7.tgz}
     engines: {node: '>= 0.4'}
+
+  is-ci@4.1.0:
+    resolution: {integrity: sha512-Ab9bQDQ11lWootZUI5qxgN2ZXwxNI5hTwnsvOc1wyxQ7zQ8OkEDw79mI0+9jI3x432NfwbVRru+3noJfXF6lSQ==, tarball: https://registry.npmjs.org/is-ci/-/is-ci-4.1.0.tgz}
+    hasBin: true
 
   is-core-module@2.16.1:
     resolution: {integrity: sha512-UfoeMA6fIJ8wTYFEUjelnaGI67v6+N7qXJEvQuIGa99l4xsCruSYOVSQ0uPANn4dAzm8lkYPaKLrrijLq7x23w==, tarball: https://registry.npmjs.org/is-core-module/-/is-core-module-2.16.1.tgz}
@@ -4261,6 +4272,8 @@ snapshots:
 
   check-error@2.1.1: {}
 
+  ci-info@4.2.0: {}
+
   clean-stack@2.2.0: {}
 
   clean-stack@5.2.0:
@@ -5172,6 +5185,10 @@ snapshots:
       semver: 7.7.1
 
   is-callable@1.2.7: {}
+
+  is-ci@4.1.0:
+    dependencies:
+      ci-info: 4.2.0
 
   is-core-module@2.16.1:
     dependencies:
