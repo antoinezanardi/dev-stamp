@@ -5,7 +5,6 @@ const ESLINT_CONFIG_FILES_CONFIG = {
   files: [
     "release.config.mjs",
     "eslint.config.ts",
-    "nuxt.config.ts",
     "config/**/*.{js,mjs,ts}",
     "modules/**/*.config.{js,mjs,ts}",
     "tests/unit/unit-setup.ts",

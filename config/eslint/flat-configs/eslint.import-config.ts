@@ -78,12 +78,7 @@ const ESLINT_IMPORT_CONFIG = {
       "error", {
         "warnOnUnassignedImports": true,
         "groups": ["builtin", "external", "internal", "parent", "sibling"],
-        "pathGroups": [
-          { pattern: "@/components/**", group: "parent" },
-          { pattern: "@/composables/**", group: "parent", position: "after" },
-          { pattern: "@/assets/**", group: "parent", position: "after" },
-          { pattern: "@/tests/**", group: "parent", position: "after" },
-        ],
+        "pathGroups": [{ pattern: "@/tests/**", group: "parent", position: "after" }],
         "pathGroupsExcludedImportTypes": ["@/tests/"],
         "newlines-between": "always",
       },

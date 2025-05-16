@@ -6,10 +6,7 @@ import { NAMING_CONVENTION_DEFAULT_CONFIG } from "../eslint.constants.js";
 
 const ESLINT_TYPESCRIPT_CONFIG = {
   name: "typescript",
-  files: [
-    "nuxt.config.ts",
-    "**/*.ts",
-  ],
+  files: ["**/*.ts"],
   plugins: { "@typescript-eslint": TypeScriptPlugin },
   languageOptions: {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
