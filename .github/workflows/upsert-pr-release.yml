@@ -82,9 +82,18 @@ jobs:
         id: release
         run: |
           npx semantic-release --dry-run --no-ci | awk '/^## [0-9]+\.[0-9]+\.[0-9]+( \(https:\/\/github\.com\/)?/ {if (found) exit; found=1} found {print}' > RELEASE.md
-          awk '/^## /{header=1} header{print; header=0; next} {sub(/^ */, ""); sub(/ \(.+?\)$/, ""); print}' RELEASE.md > temp.md && mv temp.md RELEASE.md
-          awk '/^\* / { sub(/^\* /, "* **"); sub(/: /, "**: ", $0) } 1' RELEASE.md > temp.md && mv temp.md RELEASE.md
-          sed -E "s/^## ([0-9]+\.[0-9]+\.[0-9]+)( \(https:\/\/github\.com\/${{ github.repository }}\/compare\/v[0-9]+\.[0-9]+\.[0-9]+...v[0-9]+\.[0-9]+\.[0-9]+\) \(([0-9-]+)\))?/## Release v\1/" RELEASE.md > temp.md && mv temp.md RELEASE.md
+          awk '
+          header {print; header=0; next}
+          {
+            sub(/^ */, "");
+            sub(/ \(.+?\)$/, "");
+            if (/^\* /) {
+              sub(/^\* /, "* **");
+              sub(/: /, "**: ", $0)
+            }
+            print
+          }' RELEASE.md > temp.md && mv temp.md RELEASE.md
+          sed -Ei 's/^## ([0-9]+\.[0-9]+\.[0-9]+).*/## Release v\1/' RELEASE.md
 
       - name: Cache release changelog 🥡
         uses: actions/cache@v4
