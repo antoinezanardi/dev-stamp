@@ -1,6 +1,5 @@
 #!/bin/bash
 
-set -euo pipefail
 github_user=$(git config github.user)
 
 while true; do
