@@ -33,6 +33,9 @@ if [[ "$remote_url" =~ github\.com\/(.+)\/(.+)\.git$ ]]; then
 elif [[ "$remote_url" =~ git@github\.com:(.+)\/(.+)\.git$ ]]; then
   username=${BASH_REMATCH[1]}
   repository=${BASH_REMATCH[2]}
+elif [[ "$remote_url" =~ https://github.com\/(.+)\/(.+)$ ]]; then
+  username=${BASH_REMATCH[1]}
+  repository=${BASH_REMATCH[2]}
 else
   echo "❌  Unable to extract username and repository from the remote URL: $remote_url"
   exit 1
