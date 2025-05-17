@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "rangeStrategy": "bump",
+  "assignees": ["antoinezanardi"],
+  "baseBranches": ["develop"],
+  "semanticCommits": "enabled",
+  "reviewers": ["antoinezanardi"],
+  "dependencyDashboardApproval": false
+}
