@@ -63,7 +63,9 @@
     "test:unit": "cross-env NODE_ENV=test vitest --watch --config config/vitest/vitest.global-unit-tests-config.ts",
     "test:unit:watch": "cross-env NODE_ENV=test vitest --watch --config config/vitest/vitest.global-unit-tests-config.ts",
     "test:unit:cov": "cross-env NODE_ENV=test rimraf tests/unit/coverage && vitest --coverage --config config/vitest/vitest.global-unit-tests-config.ts",
-    "test:unit:staged": "lint-staged -c config/lint-staged/.lintstagedrc.unit-tests.json"
+    "test:unit:staged": "lint-staged -c config/lint-staged/.lintstagedrc.unit-tests.json",
+    "script:create-branch": "scripts/create-git-branch.sh",
+    "script:create-pull-request": "scripts/create-pull-request.sh"
   },
   "type": "module",
   "types": "dist/index.d.ts",

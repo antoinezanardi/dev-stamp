@@ -133,7 +133,7 @@ export default {
     ],
     [
       "@semantic-release/npm",
-      { npmPublish: true },
+      { npmPublish: false },
     ],
     [
       "@semantic-release/git",
