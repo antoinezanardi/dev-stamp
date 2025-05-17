@@ -15,8 +15,8 @@
     },
     {
       "name": "Jessica GARRIDO",
-      "url": "https://www.jessica-garrido.fr",
-      "email": "jessica.codepic@gmail.com"
+      "email": "jessica.codepic@gmail.com",
+      "url": "https://www.jessica-garrido.fr"
     }
   ],
   "devDependencies": {
@@ -55,16 +55,13 @@
     "src": "src"
   },
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=18.0.0"
   },
   "exports": {
-    "import": {
+    ".": {
       "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    },
-    "require": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.cjs"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "files": [
@@ -111,5 +108,5 @@
   },
   "sideEffects": false,
   "type": "module",
-  "types": "dist/index.d.ts"
+  "types": "./dist/index.d.ts"
 }
