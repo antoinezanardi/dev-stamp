@@ -15,7 +15,10 @@
       ],
       "@config/*": [
         "./config/*"
-      ]
+      ],
+      "@tests/*": [
+        "./tests/*"
+      ],
     },
     "resolveJsonModule": true,
     "rootDir": "./src",

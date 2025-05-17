@@ -8,8 +8,8 @@ function getStampOptions(options: Partial<StampOptions>): StampOptions {
   };
 }
 
-function stampInHtml(message: string, options: StampOptions = DEFAULT_STAMP_OPTIONS): void {
-  if (typeof window === "undefined") {
+function stampInHtml(message: string, options: Partial<StampOptions> = DEFAULT_STAMP_OPTIONS): void {
+  if (typeof window === "undefined" || typeof window.document === "undefined") {
     console.error("This function can only be run in a browser environment.");
 
     return;

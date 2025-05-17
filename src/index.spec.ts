@@ -1,5 +1,5 @@
 import { describe } from "vitest";
-import { Window } from "happy-dom";
+import { Node, Window } from "happy-dom";
 
 import { DEFAULT_STAMP_OPTIONS } from "@/index.constants";
 import { getStampOptions, stampInHtml } from "@/index";
@@ -30,8 +30,16 @@ describe("Dev Stamp Index", () => {
       window.document.body.innerHTML = "<body><h1>Title</h1><p>Text</p></body>";
     });
 
-    it("should log an error when not in a browser environment.", () => {
+    it("should log an error when not in a browser environment because window is undefined.", () => {
       globalThis.window = undefined as unknown as typeof globalThis.window;
+      const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(vi.fn());
+      stampInHtml("Test message");
+
+      expect(consoleErrorSpy).toHaveBeenCalledWith("This function can only be run in a browser environment.");
+    });
+
+    it("should log an error when not in a browser environment because document is undefined.", () => {
+      globalThis.window = {} as unknown as typeof globalThis.window;
       const consoleErrorSpy = vi.spyOn(console, "error").mockImplementation(vi.fn());
       stampInHtml("Test message");
 
@@ -45,15 +53,22 @@ describe("Dev Stamp Index", () => {
       expect(consoleErrorSpy).toHaveBeenCalledWith("Target element not found: #nonexistent");
     });
 
-    it("should append a comment node with the message to the target element when called.", () => {
+    it("should append a comment node to the target element when called.", () => {
       const message = "Hello Dark Jess' 🪄";
       stampInHtml(message);
       const targetElement = window.document.querySelector("body");
-      const commentNode = document.createComment(message);
-      targetElement?.appendChild(commentNode);
       const appendedNode = targetElement?.lastChild;
 
-      expect(appendedNode).toStrictEqual(commentNode);
+      expect(appendedNode?.nodeType).toBe(Node.COMMENT_NODE);
+    });
+
+    it("should append a comment node with the message specified in first argument to the target element when called.", () => {
+      const message = "Hello Dark Jess' 🪄";
+      stampInHtml(message);
+      const targetElement = window.document.querySelector("body");
+      const appendedNode = targetElement?.lastChild;
+
+      expect(appendedNode?.nodeValue).toBe(message);
     });
   });
 });
