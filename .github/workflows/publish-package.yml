@@ -28,6 +28,7 @@ jobs:
         with:
           node-version-file: ".nvmrc"
           cache: "pnpm"
+          registry-url: "https://registry.npmjs.org"
 
       - name: Restore pnpm dependencies from cache 🥡
         uses: actions/cache/restore@v4
