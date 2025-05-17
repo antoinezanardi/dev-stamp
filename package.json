@@ -12,6 +12,11 @@
       "name": "Antoine ZANARDI",
       "email": "antoine.zanardi@epitech.eu",
       "url": "https://antoinezanardi.fr"
+    },
+    {
+      "name": "Jessica GARRIDO",
+      "url": "https://www.jessica-garrido.fr",
+      "email": "jessica.codepic@gmail.com"
     }
   ],
   "devDependencies": {
