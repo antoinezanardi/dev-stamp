@@ -46,9 +46,13 @@
   ],
   "license": "MIT",
   "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "name": "dev-stamp",
   "packageManager": "pnpm@10.10.0",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antoinezanardi/dev-stamp"
