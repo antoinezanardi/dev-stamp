@@ -2,7 +2,11 @@
   "name": "dev-stamp",
   "description": "💮 Stamp your dev footprint into HTML",
   "version": "1.0.0",
-  "author": "Antoine ZANARDI",
+  "author": {
+    "name": "Antoine ZANARDI",
+    "email": "antoine.zanardi@epitech.eu",
+    "url": "https://antoinezanardi.fr"
+  },
   "bugs": {
     "url": "https://github.com/antoinezanardi/dev-stamp/issues",
     "email": "antoine.zanardi@epitech.eu"
