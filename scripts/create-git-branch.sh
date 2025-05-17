@@ -1,4 +1,13 @@
-#!/bin/bash
+#!/bin/bash -e
+
+# Script: create-git-branch.sh
+# Description: Creates a new Git branch with a standardized naming convention.
+# The branch name follows the pattern: <job_type>/<branch_name> where:
+#   - job_type is selected from a predefined list (feat, fix, docs, etc.)
+#   - branch_name is a kebab-case string provided by the user
+#
+# Usage: ./create-git-branch.sh
+
 PS3="What kind of job are your starting ? "
 select option in "feat" "fix" "docs" "style" "refactor" "test" "perf" "build" "ci" "chore" "revert";
 do
@@ -28,5 +37,15 @@ while true; do
 done
 
 BRANCH_NAME="$SELECTED_OPTION/$FEATURE_NAME"
-git checkout -b "$BRANCH_NAME"
-echo "You're all set 🚀"
+
+if git show-ref --quiet refs/heads/"$BRANCH_NAME"; then
+  echo "❌ Branch '$BRANCH_NAME' already exists."
+  exit 1
+fi
+
+if git checkout -b "$BRANCH_NAME"; then
+  echo "You're all set 🚀"
+else
+  echo "❌ Failed to create branch '$BRANCH_NAME'."
+  exit 1
+fi

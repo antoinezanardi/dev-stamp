@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -euo pipefail
 github_user=$(git config github.user)
 
 while true; do
@@ -42,7 +43,7 @@ else
 fi
 
 if [ "$current_branch" = "$base_branch" ]; then
-  echo "❌  The current branch is already the same as the base branch."
+  echo "❌  You are on '$base_branch'. Try: git checkout -b <new-branch>"
   exit 1
 fi
 
