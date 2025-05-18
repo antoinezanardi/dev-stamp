@@ -30,3 +30,5 @@ export {
   getStampOptions,
   stampInHtml,
 };
+
+export type { StampOptions };
