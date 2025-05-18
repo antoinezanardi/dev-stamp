@@ -33,20 +33,20 @@ Whether you're building apps, sites, or web widgets – Dev Stamp leaves your *d
 
 ## 🎯 Use Cases
 
-* ✍️ Add your personal touch to your projects
-* 🧪 Debug production issues faster with visible build info
-* 🪪 Watermark internal tools or preprod environments
-* 🛠️ Keep track of your builds in a fun way
+- ✍️ Add your personal touch to your projects
+- 🧪 Debug production issues faster with visible build info
+- 🪪 Watermark internal tools or preprod environments
+- 🛠️ Keep track of your builds in a fun way
 
 ---
 
 ## 🔥 Why You'll Love It
 
-* 🪶 **Ultra-lightweight** – less than 5KB, no dependencies
-* ⚙️ **Zero-config** – works out of the box, but easily customizable
-* 💬 **Inject anything, anywhere** – version, build date, Git SHA, or your custom message anywhere in the HTML
-* 🛠️ **Tool-agnostic** – fits into any build process, no matter the stack
-* 🧙‍♂️ **Magical simplicity** – one function, one job, done right
+- 🪶 **Ultra-lightweight** – less than 5KB, no dependencies
+- ⚙️ **Zero-config** – works out of the box, but easily customizable
+- 💬 **Inject anything, anywhere** – version, build date, Git SHA, or your custom message anywhere in the HTML
+- 🛠️ **Tool-agnostic** – fits into any build process, no matter the stack
+- 🧙‍♂️ **Magical simplicity** – one function, one job, done right
 
 ---
 
@@ -124,4 +124,4 @@ Licensed under the [MIT License](https://opensource.org/licenses/MIT) 📄 – f
 
 We welcome contributions! If you have ideas, suggestions, or issues, please open an issue or a pull request.
 
-Thanks for [Jessica Garrido](https://github.com/jessicagarrido) for the awesome idea ❤️ !
+Thanks to [Jessica Garrido](https://github.com/jessicagarrido) for the fantastic idea ❤️
