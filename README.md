@@ -6,6 +6,20 @@
 
 ---
 
+## 📜 Table of Contents
+
+- [🚀 What is Dev Stamp?](#-what-is-dev-stamp)
+- [🎯 Use Cases](#-use-cases)
+- [🔥 Why You'll Love It](#-why-youll-love-it)
+- [📦 Installation](#-installation)
+- [✍️ Quick Example](#-quick-example)
+- [🛠️ Advanced Usage](#-advanced-usage)
+- [🧪 Robustness](#-robustness)
+- [⚖️ License](#-license)
+- [👩‍💻 Contributing](#-contributing)
+
+---
+
 ## 🚀 What is Dev Stamp?
 
 **Dev Stamp** is a tiny ⚡️ zero-config tool that lets you **inject custom content** (like build time, version, commit hash, or even a fun signature) right into the HTML of your project, anywhere.
@@ -69,6 +83,34 @@ devStamp("💮 Made with love by [Your Name]");
 
 ---
 
+## 🛠️ Advanced Usage
+
+You can customize the stamp with various options which can be passed as a second argument to the `stampInHtml` function.
+
+```ts
+import { stampInHtml, StampOptions } from 'dev-stamp';
+
+const options: StampOptions = {
+  targetSelector: '.my-custom-selector', // CSS selector to find the target element, comment will be injected at the end of this element
+};
+
+stampInHtml("💮 Made with love by [Your Name]", options);
+```
+
+|      Option      |                         Description                         | Default |
+|:----------------:|:-----------------------------------------------------------:|:-------:|
+| `targetSelector` | CSS selector to find the target element to inject the stamp | `body`  |
+
+---
+
+## 🧪 Robustness
+
+Dev Stamp is designed to be robust and handle various scenarios.
+
+To achieve this, it is 100% unit tested with [Vitest](https://vitest.dev/) and has 100% code coverage.
+
+---
+
 ## ⚖️ License
 
 Licensed under the [MIT License](https://opensource.org/licenses/MIT) 📄 – free as in freedom.
@@ -79,4 +121,4 @@ Licensed under the [MIT License](https://opensource.org/licenses/MIT) 📄 – f
 
 We welcome contributions! If you have ideas, suggestions, or issues, please open an issue or a pull request.
 
-Thanks for [Jessica Garrido](https://github.com/jessicagarrido) for the awesome idea ❤️!
+Thanks for [Jessica Garrido](https://github.com/jessicagarrido) for the awesome idea ❤️ !
