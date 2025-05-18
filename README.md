@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="200" alt="Logo" src="https://raw.githubusercontent.com/antoinezanardi/dev-stamp/refs/heads/main/assets/logo.png">
+  <img width="200" alt="Dev Stamp logo" src="https://raw.githubusercontent.com/antoinezanardi/dev-stamp/refs/heads/main/assets/logo.png">
   <h1>Dev Stamp</h1>
   <h3>✨ Stamp your dev footprint into HTML</h3>
   <br/>
@@ -88,7 +88,7 @@ stampInHtml("💮 Made with love by [Your Name]");
 
 ## 🛠️ Advanced Usage
 
-You can customize the stamp with various options which can be passed as a second argument to the `stampInHtml` function.
+You can customize the stamp with various options, which can be passed as a second argument to the `stampInHtml` function.
 
 ```ts
 import { stampInHtml, StampOptions } from 'dev-stamp';
