@@ -1,4 +1,8 @@
-#!/bin/bash
+#!/bin/bash -e
+
+# Script: create-pull-request.sh
+# Description: Creates a pull request on GitHub for the current branch against a specified base branch. (default: develop)
+# Usage: ./create-pull-request.sh [base_branch]
 
 github_user=$(git config github.user)
 
