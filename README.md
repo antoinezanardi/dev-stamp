@@ -1,9 +1,9 @@
-<center>
+<<div align="center">>
   <img width="200" src="https://raw.githubusercontent.com/antoinezanardi/dev-stamp/refs/heads/docs/improved-readme/assets/logo.png">
   <h1>Dev Stamp</h2>
   <h3>✨ Stamp your dev footprint into HTML</h3>
   <br/>
-</center>
+</div>
 
 ![npm version](https://img.shields.io/npm/v/dev-stamp) ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
 
