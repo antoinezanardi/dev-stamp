@@ -1,6 +1,6 @@
 <div align="center">
-  <img width="200" src="https://raw.githubusercontent.com/antoinezanardi/dev-stamp/refs/heads/docs/improved-readme/assets/logo.png">
-  <h1>Dev Stamp</h2>
+  <img width="200" alt="Logo" src="https://raw.githubusercontent.com/antoinezanardi/dev-stamp/refs/heads/main/assets/logo.png">
+  <h1>Dev Stamp</h1>
   <h3>✨ Stamp your dev footprint into HTML</h3>
   <br/>
 </div>
@@ -67,7 +67,7 @@ pnpm add -D dev-stamp
 ```ts
 import { stampInHtml } from 'dev-stamp';
 
-devStamp("💮 Made with love by [Your Name]");
+stampInHtml("💮 Made with love by [Your Name]");
 ```
 
 ⬇️ This adds a comment at the end of the `body` tag in your HTML.
