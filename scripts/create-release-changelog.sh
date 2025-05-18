@@ -7,7 +7,6 @@
 
 npx semantic-release --dry-run --no-ci | awk '/^## [0-9]+\.[0-9]+\.[0-9]+( \(https:\/\/github\.com\/)?/ {if (found) exit; found=1} found {print}' >RELEASE.md
 gawk '
-  header { print; header = 0; next }
   {
     sub(/^ */, "");
     sub(/ \(.+?\)$/, "");
