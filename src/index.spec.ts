@@ -1,28 +1,12 @@
-import { describe } from "vitest";
 import { Node, Window } from "happy-dom";
+import { describe } from "vitest";
 
-import { DEFAULT_STAMP_OPTIONS } from "@/index.constants";
-import { getStampOptions, stampInHtml } from "@/index";
+import { stampInHtml } from "@/index";
 
 const window = new Window({ url: "https://localhost:8080" });
 const document = window.document;
 
 describe("Dev Stamp Index", () => {
-  describe(getStampOptions, () => {
-    it("should return default options when no options are provided.", () => {
-      const result = getStampOptions({});
-
-      expect(result).toStrictEqual(DEFAULT_STAMP_OPTIONS);
-    });
-
-    it("should override default options with provided options when called.", () => {
-      const customOptions = { targetSelector: "#custom" };
-      const result = getStampOptions(customOptions);
-
-      expect(result).toStrictEqual({ ...DEFAULT_STAMP_OPTIONS, ...customOptions });
-    });
-  });
-
   describe(stampInHtml, () => {
     beforeEach(() => {
       globalThis.window = window as unknown as typeof globalThis.window;
