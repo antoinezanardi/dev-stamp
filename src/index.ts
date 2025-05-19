@@ -1,12 +1,6 @@
 import type { StampOptions } from "@/index.types";
 import { DEFAULT_STAMP_OPTIONS } from "@/index.constants";
-
-function getStampOptions(options: Partial<StampOptions>): StampOptions {
-  return {
-    ...DEFAULT_STAMP_OPTIONS,
-    ...options,
-  };
-}
+import { getStampOptions } from "@/utils";
 
 function stampInHtml(message: string, options: Partial<StampOptions> = DEFAULT_STAMP_OPTIONS): void {
   if (typeof window === "undefined" || typeof window.document === "undefined") {
@@ -27,7 +21,6 @@ function stampInHtml(message: string, options: Partial<StampOptions> = DEFAULT_S
 }
 
 export {
-  getStampOptions,
   stampInHtml,
 };
 
