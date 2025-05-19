@@ -86,7 +86,7 @@ yarn add -D dev-stamp
 pnpm add -D dev-stamp
 ```
 
-If you want to use **Dev Stamp** in a browser environment, you can include it via a `<script type="module">` tag which is supported by all modern browsers :
+If you want to use **Dev Stamp** in a browser environment, you can include it via a `<script type="module">` tag, which is supported by all modern browsers:
 
 ```html
 <script type="module">
