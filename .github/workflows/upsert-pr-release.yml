@@ -80,20 +80,7 @@ jobs:
 
       - name: Get next release version and create release changelog 🏷️
         id: release
-        run: |
-          npx semantic-release --dry-run --no-ci | awk '/^## [0-9]+\.[0-9]+\.[0-9]+( \(https:\/\/github\.com\/)?/ {if (found) exit; found=1} found {print}' > RELEASE.md
-          awk '
-          header {print; header=0; next}
-          {
-            sub(/^ */, "");
-            sub(/ \(.+?\)$/, "");
-            if (/^\* /) {
-              sub(/^\* /, "* **");
-              sub(/: /, "**: ", $0)
-            }
-            print
-          }' RELEASE.md > temp.md && mv temp.md RELEASE.md
-          sed -Ei 's/^## ([0-9]+\.[0-9]+\.[0-9]+).*/## Release v\1/' RELEASE.md
+        run: pnpm run script:create-release-changelog
 
       - name: Cache release changelog 🥡
         uses: actions/cache@v4

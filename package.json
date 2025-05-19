@@ -1,21 +1,43 @@
 {
-  "author": "Antoine ZANARDI",
+  "name": "dev-stamp",
   "description": "💮 Stamp your dev footprint into HTML",
+  "version": "1.0.1",
+  "author": {
+    "name": "Antoine ZANARDI",
+    "email": "antoine.zanardi@epitech.eu",
+    "url": "https://antoinezanardi.fr"
+  },
+  "bugs": {
+    "url": "https://github.com/antoinezanardi/dev-stamp/issues",
+    "email": "antoine.zanardi@epitech.eu"
+  },
+  "contributors": [
+    {
+      "name": "Antoine ZANARDI",
+      "email": "antoine.zanardi@epitech.eu",
+      "url": "https://antoinezanardi.fr"
+    },
+    {
+      "name": "Jessica GARRIDO",
+      "email": "jessica.codepic@gmail.com",
+      "url": "https://www.jessica-garrido.fr"
+    }
+  ],
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@stylistic/eslint-plugin": "^4.2.0",
-    "@types/node": "^22.15.3",
-    "@typescript-eslint/eslint-plugin": "^8.31.1",
-    "@typescript-eslint/parser": "^8.31.1",
-    "@vitest/coverage-v8": "^3.1.2",
-    "@vitest/eslint-plugin": "^1.1.43",
+    "@types/node": "^22.15.19",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "@vitest/coverage-v8": "^3.1.3",
+    "@vitest/eslint-plugin": "^1.2.0",
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "cross-env": "^7.0.3",
-    "eslint": "^9.25.1",
-    "eslint-import-resolver-typescript": "^4.3.4",
+    "eslint": "^9.27.0",
+    "eslint-import-resolver-typescript": "^4.3.5",
     "eslint-plugin-import": "^2.31.0",
     "happy-dom": "^17.4.7",
     "husky": "^9.1.7",
@@ -25,19 +47,35 @@
     "rimraf": "^6.0.1",
     "semantic-release": "^24.2.4",
     "semantic-release-export-data": "^1.1.0",
-    "tsup": "^8.4.0",
+    "tsup": "^8.5.0",
     "typescript": "^5.8.3",
     "validate-branch-name": "^1.3.2",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.1.2"
+    "vitest": "^3.1.3"
+  },
+  "directories": {
+    "lib": "dist",
+    "test": "tests",
+    "src": "src"
+  },
+  "engines": {
+    "node": ">=22.15.1"
   },
   "exports": {
-    "import": "./dist/index.js",
-    "require": "./dist/index.cjs"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
   },
   "files": [
     "dist"
   ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/antoinezanardi"
+  },
+  "homepage": "https://github.com/antoinezanardi/dev-stamp#readme",
   "keywords": [
     "html",
     "dev",
@@ -47,15 +85,16 @@
   "license": "MIT",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
-  "name": "dev-stamp",
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.11.0",
+  "private": false,
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "readme": "README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antoinezanardi/dev-stamp"
+    "url": "git+https://github.com/antoinezanardi/dev-stamp.git"
   },
   "scripts": {
     "prepare": "is-ci || husky",
@@ -69,9 +108,10 @@
     "test:unit:cov": "cross-env NODE_ENV=test rimraf tests/unit/coverage && vitest --coverage --config config/vitest/vitest.global-unit-tests-config.ts",
     "test:unit:staged": "lint-staged -c config/lint-staged/.lintstagedrc.unit-tests.json",
     "script:create-branch": "scripts/create-git-branch.sh",
-    "script:create-pull-request": "scripts/create-pull-request.sh"
+    "script:create-pull-request": "scripts/create-pull-request.sh",
+    "script:create-release-changelog": "scripts/create-release-changelog.sh"
   },
+  "sideEffects": false,
   "type": "module",
-  "types": "dist/index.d.ts",
-  "version": "1.0.1"
+  "types": "./dist/index.d.ts"
 }
