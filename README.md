@@ -14,8 +14,8 @@
 - [🚀 What is Dev Stamp?](#-what-is-dev-stamp)
 - [🎯 Use Cases](#-use-cases)
 - [🔥 Why You'll Love It](#-why-youll-love-it)
-- [📦 Installation](#-installation)
 - [✍️ Quick Example](#-quick-example)
+- [📦 Installation](#-installation)
 - [🛠️ Advanced Usage](#-advanced-usage)
 - [🧪 Robustness](#-robustness)
 - [⚖️ License](#-license)
@@ -50,18 +50,6 @@ Whether you're building apps, sites, or web widgets – Dev Stamp leaves your *d
 
 ---
 
-## 📦 Installation
-
-```bash
-npm i dev-stamp --save-dev
-# or
-yarn add -D dev-stamp
-# or
-pnpm add -D dev-stamp
-```
-
----
-
 ## ✍️ Quick Example
 
 ```ts
@@ -82,6 +70,30 @@ stampInHtml("💮 Made with love by [Your Name]");
     <!-- 💮 Made with love by [Your Name] -->
   </body>
 </html>
+```
+
+---
+
+## 📦 Installation
+
+If you're using **npm**, **yarn**, or **pnpm**, you can install **Dev Stamp** with the following command:
+
+```bash
+npm i dev-stamp --save-dev
+# or
+yarn add -D dev-stamp
+# or
+pnpm add -D dev-stamp
+```
+
+If you want to use **Dev Stamp** in a browser environment, you can include it via a `<script type="module">` tag, which is supported by all modern browsers:
+
+```html
+<script type="module">
+  import { stampInHtml } from "https://cdn.jsdelivr.net/npm/dev-stamp/dist/index.js";
+
+  stampInHtml("Hello from CDN 🪴");
+</script>
 ```
 
 ---
