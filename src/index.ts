@@ -1,6 +1,6 @@
 import type { StampOptions } from "@/index.types";
 import { DEFAULT_STAMP_OPTIONS } from "@/index.constants";
-import { getStampOptions } from "@/utils";
+import { getStampOptions } from "@/utils/utils";
 
 function stampInHtml(message: string, options: Partial<StampOptions> = DEFAULT_STAMP_OPTIONS): void {
   if (typeof window === "undefined" || typeof window.document === "undefined") {

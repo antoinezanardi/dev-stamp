@@ -5,7 +5,9 @@
   <br/>
 </div>
 
-![npm version](https://img.shields.io/npm/v/dev-stamp) ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
+![npm version](https://img.shields.io/npm/v/dev-stamp) 
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fantoinezanardi%2Fdev-stamp%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/antoinezanardi/dev-stamp/main)
+![MIT License](https://img.shields.io/badge/license-MIT-blue.svg) 
 
 ---
 
@@ -123,6 +125,10 @@ stampInHtml("💮 Made with love by [Your Name]", options);
 Dev Stamp is designed to be robust and handle various scenarios.
 
 To achieve this, it is 100% unit tested with [Vitest](https://vitest.dev/) and has 100% code coverage.
+
+[StrykerJS](https://stryker-mutator.io/) is used to ensure the code is resilient to mutations.
+
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fantoinezanardi%2Fdev-stamp%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/antoinezanardi/dev-stamp/main)
 
 ---
 
