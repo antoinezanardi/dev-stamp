@@ -216,7 +216,7 @@ jobs:
 
       - name: Mutant tests 👽
         id: mutant-tests
-        run: pnpm run test:stryker
+        run: pnpm run test:stryker:ci
 
       - name: Save stryker report as artifact 💎
         uses: actions/upload-artifact@v4
