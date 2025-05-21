@@ -128,6 +128,8 @@ To achieve this, it is 100% unit tested with [Vitest](https://vitest.dev/) and h
 
 [StrykerJS](https://stryker-mutator.io/) is used to ensure the code is resilient to mutations.
 
+You can check the mutation testing results by clicking on the badges below:
+
 [![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fantoinezanardi%2Fdev-stamp%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/antoinezanardi/dev-stamp/main)
 
 ---

@@ -4,71 +4,12 @@
       "language": "typescript",
       "mutants": [
         {
-          "id": "0",
-          "mutatorName": "BlockStatement",
-          "replacement": "{}",
-          "statusReason": "expected \"error\" to be called with arguments: [ Array(1) ]\u001b[90m\n\nNumber of calls: \u001b[1m0\u001b[22m\n\u001b[39m",
-          "status": "Killed",
-          "testsCompleted": 1,
-          "static": false,
-          "killedBy": [
-            "0"
-          ],
-          "coveredBy": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4"
-          ],
-          "location": {
-            "end": {
-              "column": 2,
-              "line": 21
-            },
-            "start": {
-              "column": 101,
-              "line": 5
-            }
-          }
-        },
-        {
           "id": "1",
           "mutatorName": "ConditionalExpression",
           "replacement": "true",
           "statusReason": "src/index.ts(20,3): error TS18047: 'targetElement' is possibly 'null'.\n",
           "status": "CompileError",
           "static": false,
-          "killedBy": [],
-          "coveredBy": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4"
-          ],
-          "location": {
-            "end": {
-              "column": 78,
-              "line": 6
-            },
-            "start": {
-              "column": 7,
-              "line": 6
-            }
-          }
-        },
-        {
-          "id": "2",
-          "mutatorName": "ConditionalExpression",
-          "replacement": "false",
-          "statusReason": "Cannot read properties of undefined (reading 'document')",
-          "status": "Killed",
-          "testsCompleted": 1,
-          "static": false,
-          "killedBy": [
-            "0"
-          ],
           "coveredBy": [
             "0",
             "1",
@@ -94,7 +35,6 @@
           "statusReason": "src/index.ts(6,54): error TS2339: Property 'document' does not exist on type 'never'.\n",
           "status": "CompileError",
           "static": false,
-          "killedBy": [],
           "coveredBy": [
             "0",
             "1",
@@ -114,13 +54,13 @@
           }
         },
         {
-          "id": "4",
+          "id": "2",
           "mutatorName": "ConditionalExpression",
           "replacement": "false",
           "statusReason": "Cannot read properties of undefined (reading 'document')",
           "status": "Killed",
-          "testsCompleted": 1,
           "static": false,
+          "testsCompleted": 1,
           "killedBy": [
             "0"
           ],
@@ -133,12 +73,41 @@
           ],
           "location": {
             "end": {
-              "column": 36,
+              "column": 78,
               "line": 6
             },
             "start": {
               "column": 7,
               "line": 6
+            }
+          }
+        },
+        {
+          "id": "0",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "statusReason": "expected \"error\" to be called with arguments: [ Array(1) ]\u001b[90m\n\nNumber of calls: \u001b[1m0\u001b[22m\n\u001b[39m",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "0"
+          ],
+          "coveredBy": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "location": {
+            "end": {
+              "column": 2,
+              "line": 21
+            },
+            "start": {
+              "column": 101,
+              "line": 5
             }
           }
         },
@@ -149,7 +118,6 @@
           "statusReason": "src/index.ts(6,54): error TS2339: Property 'document' does not exist on type 'never'.\nsrc/index.ts(13,32): error TS2339: Property 'document' does not exist on type 'never'.\nsrc/index.ts(19,30): error TS2339: Property 'document' does not exist on type 'never'.\n",
           "status": "CompileError",
           "static": false,
-          "killedBy": [],
           "coveredBy": [
             "0",
             "1",
@@ -175,7 +143,6 @@
           "statusReason": "src/index.ts(6,7): error TS2367: This comparison appears to be unintentional because the types '\"string\" | \"number\" | \"bigint\" | \"boolean\" | \"symbol\" | \"undefined\" | \"object\" | \"function\"' and '\"\"' have no overlap.\nsrc/index.ts(6,45): error TS2339: Property 'document' does not exist on type 'never'.\nsrc/index.ts(13,32): error TS2339: Property 'document' does not exist on type 'never'.\nsrc/index.ts(19,30): error TS2339: Property 'document' does not exist on type 'never'.\n",
           "status": "CompileError",
           "static": false,
-          "killedBy": [],
           "coveredBy": [
             "0",
             "1",
@@ -200,8 +167,8 @@
           "replacement": "false",
           "statusReason": "Cannot read properties of undefined (reading 'querySelector')",
           "status": "Killed",
-          "testsCompleted": 1,
           "static": false,
+          "testsCompleted": 1,
           "killedBy": [
             "1"
           ],
@@ -223,13 +190,41 @@
           }
         },
         {
+          "id": "4",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "statusReason": "Cannot read properties of undefined (reading 'document')",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "0"
+          ],
+          "coveredBy": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "location": {
+            "end": {
+              "column": 36,
+              "line": 6
+            },
+            "start": {
+              "column": 7,
+              "line": 6
+            }
+          }
+        },
+        {
           "id": "8",
           "mutatorName": "EqualityOperator",
           "replacement": "typeof window.document !== \"undefined\"",
           "statusReason": "src/index.ts(13,41): error TS2339: Property 'querySelector' does not exist on type 'never'.\nsrc/index.ts(19,39): error TS2339: Property 'createComment' does not exist on type 'never'.\n",
           "status": "CompileError",
           "static": false,
-          "killedBy": [],
           "coveredBy": [
             "1",
             "2",
@@ -254,7 +249,6 @@
           "statusReason": "src/index.ts(6,40): error TS2367: This comparison appears to be unintentional because the types '\"string\" | \"number\" | \"bigint\" | \"boolean\" | \"symbol\" | \"undefined\" | \"object\" | \"function\"' and '\"\"' have no overlap.\nsrc/index.ts(13,41): error TS2339: Property 'querySelector' does not exist on type 'never'.\nsrc/index.ts(19,39): error TS2339: Property 'createComment' does not exist on type 'never'.\n",
           "status": "CompileError",
           "static": false,
-          "killedBy": [],
           "coveredBy": [
             "1",
             "2",
@@ -278,8 +272,8 @@
           "replacement": "{}",
           "statusReason": "Cannot read properties of undefined (reading 'document')",
           "status": "Killed",
-          "testsCompleted": 1,
           "static": false,
+          "testsCompleted": 1,
           "killedBy": [
             "0"
           ],
@@ -304,8 +298,8 @@
           "replacement": "\"\"",
           "statusReason": "expected \"error\" to be called with arguments: [ Array(1) ]\u001b[90m\n\nReceived: \n\n\u001b[1m  1st error call:\n\n\u001b[22m\u001b[2m  [\u001b[22m\n\u001b[32m-   \"This function can only be run in a browser environment.\",\u001b[90m\n\u001b[31m+   \"\",\u001b[90m\n\u001b[2m  ]\u001b[22m\n\u001b[39m\u001b[90m\n\nNumber of calls: \u001b[1m1\u001b[22m\n\u001b[39m",
           "status": "Killed",
-          "testsCompleted": 1,
           "static": false,
+          "testsCompleted": 1,
           "killedBy": [
             "0"
           ],
@@ -331,7 +325,6 @@
           "statusReason": "src/index.ts(20,3): error TS18047: 'targetElement' is possibly 'null'.\n",
           "status": "CompileError",
           "static": false,
-          "killedBy": [],
           "coveredBy": [
             "2",
             "3",
@@ -355,31 +348,6 @@
           "statusReason": "src/index.ts(20,3): error TS18047: 'targetElement' is possibly 'null'.\n",
           "status": "CompileError",
           "static": false,
-          "killedBy": [],
-          "coveredBy": [
-            "2",
-            "3",
-            "4"
-          ],
-          "location": {
-            "end": {
-              "column": 21,
-              "line": 14
-            },
-            "start": {
-              "column": 7,
-              "line": 14
-            }
-          }
-        },
-        {
-          "id": "14",
-          "mutatorName": "ConditionalExpression",
-          "replacement": "false",
-          "statusReason": "src/index.ts(20,3): error TS18047: 'targetElement' is possibly 'null'.\n",
-          "status": "CompileError",
-          "static": false,
-          "killedBy": [],
           "coveredBy": [
             "2",
             "3",
@@ -403,7 +371,6 @@
           "statusReason": "src/index.ts(16,3): error TS18047: 'targetElement' is possibly 'null'.\n",
           "status": "CompileError",
           "static": false,
-          "killedBy": [],
           "coveredBy": [
             "2"
           ],
@@ -419,13 +386,36 @@
           }
         },
         {
+          "id": "14",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "statusReason": "src/index.ts(20,3): error TS18047: 'targetElement' is possibly 'null'.\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "2",
+            "3",
+            "4"
+          ],
+          "location": {
+            "end": {
+              "column": 21,
+              "line": 14
+            },
+            "start": {
+              "column": 7,
+              "line": 14
+            }
+          }
+        },
+        {
           "id": "16",
           "mutatorName": "StringLiteral",
           "replacement": "``",
           "statusReason": "expected \"error\" to be called with arguments: [ Array(1) ]\u001b[90m\n\nReceived: \n\n\u001b[1m  1st error call:\n\n\u001b[22m\u001b[2m  [\u001b[22m\n\u001b[32m-   \"Target element not found: #nonexistent\",\u001b[90m\n\u001b[31m+   \"\",\u001b[90m\n\u001b[2m  ]\u001b[22m\n\u001b[39m\u001b[90m\n\nNumber of calls: \u001b[1m1\u001b[22m\n\u001b[39m",
           "status": "Killed",
-          "testsCompleted": 1,
           "static": false,
+          "testsCompleted": 1,
           "killedBy": [
             "2"
           ],
@@ -456,7 +446,6 @@
           "statusReason": "src/utils/utils.ts(4,59): error TS2355: A function whose declared type is neither 'undefined', 'void', nor 'any' must return a value.\n",
           "status": "CompileError",
           "static": false,
-          "killedBy": [],
           "coveredBy": [
             "2",
             "3",
@@ -482,7 +471,6 @@
           "statusReason": "src/utils/utils.ts(5,3): error TS2741: Property 'targetSelector' is missing in type '{}' but required in type 'StampOptions'.\n",
           "status": "CompileError",
           "static": false,
-          "killedBy": [],
           "coveredBy": [
             "2",
             "3",
@@ -551,7 +539,7 @@
       "source": "import { describe } from \"vitest\";\n\nimport { DEFAULT_STAMP_OPTIONS } from \"@/index.constants\";\nimport { getStampOptions } from \"@/utils/utils\";\n\ndescribe(\"Dev Stamp Utils\", () => {\n  describe(getStampOptions, () => {\n    it(\"should return default options when no options are provided.\", () => {\n      const result = getStampOptions({});\n\n      expect(result).toStrictEqual(DEFAULT_STAMP_OPTIONS);\n    });\n\n    it(\"should override default options with provided options when called.\", () => {\n      const customOptions = { targetSelector: \"#custom\" };\n      const result = getStampOptions(customOptions);\n\n      expect(result).toStrictEqual({ ...DEFAULT_STAMP_OPTIONS, ...customOptions });\n    });\n  });\n});"
     }
   },
-  "projectRoot": "/Users/mac-Z14AZANA/WebstormProjects/dev-stamp",
+  "projectRoot": "/Users/antoinezanardi/WebstormProjects/dev-stamp",
   "config": {
     "cleanTempDir": "always",
     "incremental": true,
