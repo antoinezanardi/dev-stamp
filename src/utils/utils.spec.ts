@@ -1,7 +1,7 @@
 import { describe } from "vitest";
 
 import { DEFAULT_STAMP_OPTIONS } from "@/index.constants";
-import { getStampOptions } from "@/utils";
+import { getStampOptions } from "@/utils/utils";
 
 describe("Dev Stamp Utils", () => {
   describe(getStampOptions, () => {

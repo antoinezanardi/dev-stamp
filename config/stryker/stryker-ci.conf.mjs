@@ -1,0 +1,29 @@
+import defaultConfig from "./stryker.conf.mjs";
+
+const reporters = [
+  "progress-append-only",
+  "html",
+  "json",
+];
+
+const dashboard = {
+  project: "github.com/antoinezanardi/dev-stamp",
+  baseUrl: "https://dashboard.stryker-mutator.io/api/reports",
+  reportType: "full",
+};
+const version = process.env.VERSION;
+
+if (process.env.STRYKER_DASHBOARD_API_KEY !== undefined) {
+  reporters.push("dashboard");
+}
+
+if (process.env.VERSION !== undefined) {
+  dashboard.version = version;
+}
+
+export default {
+  ...defaultConfig,
+  concurrency: 1,
+  dashboard,
+  reporters,
+};
