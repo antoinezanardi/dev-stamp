@@ -13,7 +13,7 @@ env:
   BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
   BRANCH_NAME_FORMATTED_FOR_REPORTS: ${BRANCH_NAME//\//_}
   UNIT_TESTS_COVERAGE_REPORTS_PATH: tests/unit/coverage
-  UNIT_TESTS_COVERAGE_BASE_CACHE_KEY: tests-unit-coverage-v3-${BRANCH_NAME}
+  UNIT_TESTS_COVERAGE_BASE_CACHE_KEY: tests-unit-coverage-v3-${{ env.BRANCH_NAME_FORMATTED_FOR_REPORTS }}
   GH_TOKEN: ${{ github.token }}
   STRYKER_REPORT_PATH: tests/stryker/coverage
   STRYKER_INCREMENTAL_PATH: tests/stryker/incremental
