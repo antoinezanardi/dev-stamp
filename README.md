@@ -137,7 +137,7 @@ To achieve this, it is 100% unit tested with [Vitest](https://vitest.dev/) and h
 
 ### 🐋 SonarCloud
 
-The code quality is continuously monitored using [SonarCloud](https://www.sonarqube.org/).
+The code quality is continuously monitored using [SonarCloud](https://sonarcloud.io/).
 
 You can check the code quality by clicking on the badge below:
 

@@ -8,9 +8,6 @@ function stampInHtml(message: string, options: Partial<StampOptions> = DEFAULT_S
 
     return;
   }
-  if (false) {
-    console.log("window", window);
-  }
   const mergedOptions = getStampOptions(options);
   const { targetSelector } = mergedOptions;
   const targetElement = window.document.querySelector(targetSelector);
