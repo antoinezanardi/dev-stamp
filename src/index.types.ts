@@ -1,4 +1,7 @@
+type StampMode = "comment";
+
 type StampOptions = {
+  mode: StampMode;
   targetSelector: string;
 };
 
