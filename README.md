@@ -135,13 +135,13 @@ Dev Stamp is designed to be robust and handle various scenarios.
 
 To achieve this, it is 100% unit tested with [Vitest](https://vitest.dev/) and has 100% code coverage.
 
-### 🐋 SonarQube
+### 🐋 SonarCloud
 
-The code quality is continuously monitored using [SonarQube](https://www.sonarqube.org/).
+The code quality is continuously monitored using [SonarCloud](https://www.sonarqube.org/).
 
 You can check the code quality by clicking on the badge below:
 
-[![SonarQube Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=antoinezanardi_dev-stamp&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=antoinezanardi_dev-stamp)
+[![SonarCloud Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=antoinezanardi_dev-stamp&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=antoinezanardi_dev-stamp)
 
 ### 👽 Mutation Testing
 
