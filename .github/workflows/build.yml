@@ -14,7 +14,7 @@ env:
   BRANCH_NAME_FORMATTED_FOR_REPORTS: ${BRANCH_NAME//\//_}
   UNIT_TESTS_COVERAGE_CACHE_ID: cache-unit-tests-coverage
   UNIT_TESTS_COVERAGE_REPORTS_PATH: tests/unit/coverage
-  UNIT_TESTS_COVERAGE_BASE_CACHE_KEY: ${{ runner.os }}-tests-unit-coverage-v3-${{ env.BRANCH_NAME }}-
+  UNIT_TESTS_COVERAGE_BASE_CACHE_KEY: tests-unit-coverage-v3-${BRANCH_NAME}
   GH_TOKEN: ${{ github.token }}
   STRYKER_REPORT_PATH: tests/stryker/coverage
   STRYKER_INCREMENTAL_PATH: tests/stryker/incremental
