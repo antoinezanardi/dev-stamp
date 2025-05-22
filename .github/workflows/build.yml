@@ -11,7 +11,6 @@ concurrency:
 
 env:
   BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
-  BRANCH_NAME_FORMATTED_FOR_REPORTS: ${${{ github.head_ref || github.ref_name }}//\//_}
   UNIT_TESTS_COVERAGE_REPORTS_PATH: tests/unit/coverage
   UNIT_TESTS_COVERAGE_BASE_CACHE_KEY: tests-unit-coverage-v3-${{ github.head_ref || github.ref_name }}
   GH_TOKEN: ${{ github.token }}
@@ -266,7 +265,7 @@ jobs:
             ${{ env.UNIT_TESTS_COVERAGE_BASE_CACHE_KEY }}-
 
       - name: SonarCloud Scan 🌥️
-        uses: SonarSource/sonarcloud-github-action@v5.0.0
+        uses: SonarSource/sonarqube-scan-action@v5.2.0
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_PUSH_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
