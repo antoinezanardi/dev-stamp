@@ -4,6 +4,10 @@ on:
     branches:
       - "main"
       - "develop"
+  push:
+    branches:
+      - "main"
+      - "develop"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
@@ -11,8 +15,8 @@ concurrency:
 
 env:
   BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
-  BRANCH_NAME_FORMATTED_FOR_REPORTS: ${BRANCH_NAME//\//_}
   UNIT_TESTS_COVERAGE_REPORTS_PATH: tests/unit/coverage
+  UNIT_TESTS_COVERAGE_BASE_CACHE_KEY: tests-unit-coverage-v3-${{ github.head_ref || github.ref_name }}
   GH_TOKEN: ${{ github.token }}
   STRYKER_REPORT_PATH: tests/stryker/coverage
   STRYKER_INCREMENTAL_PATH: tests/stryker/incremental
@@ -169,8 +173,8 @@ jobs:
         id: cache-unit-tests-coverage
         if: ${{ hashFiles('tests/unit/coverage/lcov.info') }}
         with:
-          path: tests/unit/coverage
-          key: ${{ runner.os }}-tests-unit-coverage-v3-${{ env.BRANCH_NAME }}-${{hashFiles('tests/unit/coverage/lcov.info')}}
+          path: ${{ env.UNIT_TESTS_COVERAGE_REPORTS_PATH }}
+          key: ${{ env.UNIT_TESTS_COVERAGE_BASE_CACHE_KEY }}-${{hashFiles('tests/unit/coverage/lcov.info')}}
 
       - name: Save unit tests coverage report as artifact 💎
         uses: actions/upload-artifact@v4
@@ -231,3 +235,41 @@ jobs:
           name: stryker-incremental
           path: ${{ env.STRYKER_INCREMENTAL_PATH }}/incremental.json
           retention-days: 2
+
+  sonarcloud:
+    name: SonarCloud Analysis 🌥️
+    runs-on: ubuntu-latest
+    needs:
+      - unit-tests
+    steps:
+      - name: Checkout GitHub repository 📡
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install pnpm 🏗️
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Restore pnpm dependencies from cache 🥡
+        uses: actions/cache/restore@v4
+        id: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-pnpm-v3-${{ hashFiles('pnpm-lock.yaml') }}
+
+      - name: Restore tests coverage from cache 🥡
+        uses: actions/cache/restore@v4
+        id: cache-unit-tests-coverage
+        with:
+          path: ${{ env.UNIT_TESTS_COVERAGE_REPORTS_PATH }}
+          key: ${{ env.UNIT_TESTS_COVERAGE_BASE_CACHE_KEY }}-
+          restore-keys: |
+            ${{ env.UNIT_TESTS_COVERAGE_BASE_CACHE_KEY }}-
+
+      - name: SonarCloud Scan 🌥️
+        uses: SonarSource/sonarqube-scan-action@v5.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_PUSH_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
