@@ -5,9 +5,16 @@
   <br/>
 </div>
 
-![npm version](https://img.shields.io/npm/v/dev-stamp) 
-[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fantoinezanardi%2Fdev-stamp%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/antoinezanardi/dev-stamp/main)
-![MIT License](https://img.shields.io/badge/license-MIT-blue.svg) 
+<div align="center">
+  <a href="https://www.npmjs.com/package/dev-stamp"><img src="https://img.shields.io/npm/v/dev-stamp" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/dev-stamp"><img src="https://img.shields.io/npm/dm/dev-stamp" alt="npm downloads"></a>
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License">
+</div>
+
+<div align="center">
+  <a href="https://sonarcloud.io/summary/new_code?id=antoinezanardi_dev-stamp"><img src="https://sonarcloud.io/api/project_badges/measure?project=antoinezanardi_dev-stamp&metric=alert_status" alt="SonarQube Quality Gate"></a>
+  <a href="https://dashboard.stryker-mutator.io/reports/github.com/antoinezanardi/dev-stamp/main"><img src="https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fantoinezanardi%2Fdev-stamp%2Fmain" alt="Mutation testing badge"></a>
+</div>
 
 ---
 
@@ -122,9 +129,21 @@ stampInHtml("💮 Made with love by [Your Name]", options);
 
 ## 🧪 Robustness
 
+### 💯 Unit Testing
+
 Dev Stamp is designed to be robust and handle various scenarios.
 
 To achieve this, it is 100% unit tested with [Vitest](https://vitest.dev/) and has 100% code coverage.
+
+### 🐋 SonarQube
+
+The code quality is continuously monitored using [SonarQube](https://www.sonarqube.org/).
+
+You can check the code quality by clicking on the badge below:
+
+[![SonarQube Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=antoinezanardi_dev-stamp&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=antoinezanardi_dev-stamp)
+
+### 👽 Mutation Testing
 
 [StrykerJS](https://stryker-mutator.io/) is used to ensure the code is resilient to mutations.
 
