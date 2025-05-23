@@ -134,14 +134,14 @@ You can choose the mode by setting the `mode` option in the `StampOptions`.
 
 ### 🦋 Options
 
-|      Field       |                     Type                     |                                             Description                                              |                           Default                           |
-|:----------------:|:--------------------------------------------:|:----------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------:|
-| `targetSelector` |                   `string`                   | CSS selector to find the target element to inject the stamp. Only used if `mode` is set to `comment` |                          `"body"`                           |
-|      `mode`      |          `"comment" \| "meta-tag"`           |                           Mode of HTML injection: `comment` or `meta-tag`                            |                         `"comment"`                         |
-|    `metaTag`     |  [StampMetaTagOptions](#-meta-tag-options)   |        Options related to the `meta-tag` injection. Only used if `mode` is set to `meta-tag`         | Refer to [Meta Tag Options](#-meta-tag-options) for details |
+|      Field       |                    Type                    |                                             Description                                              |                          Default                           |
+|:----------------:|:------------------------------------------:|:----------------------------------------------------------------------------------------------------:|:----------------------------------------------------------:|
+| `targetSelector` |                  `string`                  | CSS selector to find the target element to inject the stamp. Only used if `mode` is set to `comment` |                          `"body"`                          |
+|      `mode`      |        `"comment"`<br/>`"meta-tag"`        |                           Mode of HTML injection: `comment` or `meta-tag`                            |                        `"comment"`                         |
+|    `metaTag`     |  [StampMetaTagOptions](#meta-tag-options)  |        Options related to the `meta-tag` injection. Only used if `mode` is set to `meta-tag`         | Refer to [Meta Tag Options](#meta-tag-options) for details |
 
 
-#### ☀️ Meta Tag Options
+#### Meta Tag Options
 
 |    Field    |   Type    |                         Description                          |    Default    |
 |:-----------:|:---------:|:------------------------------------------------------------:|:-------------:|
