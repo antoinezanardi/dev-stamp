@@ -1,5 +1,33 @@
 # 💮 Dev Stamp Changelog
 
+## [1.1.0](https://github.com/antoinezanardi/dev-stamp/compare/v1.0.2...v1.1.0) (2025-05-23)
+
+### 🚀 Features
+
+* **ci:** add SonarCloud analysis and improve caching for unit tests coverage ([#33](https://github.com/antoinezanardi/dev-stamp/issues/33)) ([1e7e317](https://github.com/antoinezanardi/dev-stamp/commit/1e7e317698d4990526b71ccefe9005b3f1bf2676))
+
+### 📖 Docs
+
+* **readme:** update installation instructions and add CDN usage example ([#24](https://github.com/antoinezanardi/dev-stamp/issues/24)) ([6d70eee](https://github.com/antoinezanardi/dev-stamp/commit/6d70eee14f930c5c1b3db3aa8612418a6eee4338))
+
+### 🔩 Refactor
+
+* **index:** move getStampOptions to utils and update ESLint ignores ([#27](https://github.com/antoinezanardi/dev-stamp/issues/27)) ([f07f53f](https://github.com/antoinezanardi/dev-stamp/commit/f07f53fd79d6ae06a5a5a6a79d885a39944bf36d))
+* **modes:** prepare codebase for various modes ([#35](https://github.com/antoinezanardi/dev-stamp/issues/35)) ([c5dcf57](https://github.com/antoinezanardi/dev-stamp/commit/c5dcf57cacc69f86e5031d8312e975c9af8d78fb))
+
+### ✅ Tests
+
+* **stryker:** add Stryker mutation testing configuration and scripts ([#29](https://github.com/antoinezanardi/dev-stamp/issues/29)) ([fb4f78b](https://github.com/antoinezanardi/dev-stamp/commit/fb4f78b4bb5979875045b701429524e66a6bbf62))
+
+### 🧹 Chore
+
+* **ci:** remove redundant push branches from build configuration ([#34](https://github.com/antoinezanardi/dev-stamp/issues/34)) ([e15aa5e](https://github.com/antoinezanardi/dev-stamp/commit/e15aa5e93948acc2e3a72dcf475105578d68c0d1))
+* **deps:** update dependency @types/node to ^22.15.20 ([#30](https://github.com/antoinezanardi/dev-stamp/issues/30)) ([cc6ca21](https://github.com/antoinezanardi/dev-stamp/commit/cc6ca212aaa1b6911b07b405edcbf381882cad32))
+* **deps:** update dependency @types/node to ^22.15.21 ([#31](https://github.com/antoinezanardi/dev-stamp/issues/31)) ([9284243](https://github.com/antoinezanardi/dev-stamp/commit/928424318980efbab826e4e2d2e71491eb4349eb))
+* **deps:** update dependency conventional-changelog-conventionalcommits to v9 ([#28](https://github.com/antoinezanardi/dev-stamp/issues/28)) ([b721023](https://github.com/antoinezanardi/dev-stamp/commit/b7210236f473b9d500e6dce28f2458ae469de2e9))
+* **deps:** update node.js to v22.16.0 ([#32](https://github.com/antoinezanardi/dev-stamp/issues/32)) ([4c5196c](https://github.com/antoinezanardi/dev-stamp/commit/4c5196c19335573cc8f80843456000438600c21e))
+* **deps:** update vitest monorepo to ^3.1.4 ([#26](https://github.com/antoinezanardi/dev-stamp/issues/26)) ([566b0fc](https://github.com/antoinezanardi/dev-stamp/commit/566b0fcea3c0460c4fabb114901819c8b5083224))
+
 ## [1.0.2](https://github.com/antoinezanardi/dev-stamp/compare/v1.0.1...v1.0.2) (2025-05-19)
 
 ### 📖 Docs
