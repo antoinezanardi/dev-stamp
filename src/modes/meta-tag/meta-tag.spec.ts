@@ -37,6 +37,41 @@ describe("Meta Tag Mode", () => {
       expect(appendChildSpy).toHaveBeenCalledExactlyOnceWith(appendedMetaTag);
     });
 
+    it("should create a new meta tag when called.", () => {
+      const message = "Hello Dark Jess' 🪄";
+      const { head } = window.document;
+      const appendChildSpy = vi.spyOn(head, "appendChild");
+      stampMetaTagInHtml(message, DEFAULT_STAMP_OPTIONS);
+      const appendedElement = appendChildSpy.mock.calls[0][0] as HTMLMetaElement;
+
+      expect(appendedElement.tagName).toBe("META");
+    });
+
+    it("should create a new meta tag with the personalized name when set in options.", () => {
+      const message = "Hello Dark Jess' 🪄";
+      const { head } = window.document;
+      const appendChildSpy = vi.spyOn(head, "appendChild");
+      const customName = "custom-name";
+      const customOptions = {
+        ...DEFAULT_STAMP_OPTIONS,
+        metaTag: { ...DEFAULT_STAMP_OPTIONS.metaTag, name: customName },
+      };
+      stampMetaTagInHtml(message, customOptions);
+      const appendedElement = appendChildSpy.mock.calls[0][0] as HTMLMetaElement;
+
+      expect(appendedElement.getAttribute("name")).toBe(customName);
+    });
+
+    it("should create a new meta tag with the message as content when called.", () => {
+      const message = "Hello Dark Jess' 🪄";
+      const { head } = window.document;
+      const appendChildSpy = vi.spyOn(head, "appendChild");
+      stampMetaTagInHtml(message, DEFAULT_STAMP_OPTIONS);
+      const appendedElement = appendChildSpy.mock.calls[0][0] as HTMLMetaElement;
+
+      expect(appendedElement.getAttribute("content")).toBe(message);
+    });
+
     it("should call stampOnExistingMetaTag when there is an existing meta tag.", () => {
       const message = "Hello Dark Jess' 🪄";
       const { head } = window.document;
