@@ -55,15 +55,9 @@ const NAMING_CONVENTION_DEFAULT_CONFIG = [
 ];
 
 const ESLINT_IGNORES = [
-  ".output/*",
-  ".output/*/",
-  ".output/**/*",
-  ".output/**/*/",
-  ".output/server/chunks/runtime.mjs",
+  "dist/*",
   "node_modules/*",
   "node_modules/**/*",
-  "public/*",
-  "public/**/*",
 ];
 
 export {

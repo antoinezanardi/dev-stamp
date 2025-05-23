@@ -5,7 +5,16 @@
   <br/>
 </div>
 
-![npm version](https://img.shields.io/npm/v/dev-stamp) ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
+<div align="center">
+  <a href="https://www.npmjs.com/package/dev-stamp"><img src="https://img.shields.io/npm/v/dev-stamp" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/dev-stamp"><img src="https://img.shields.io/npm/dm/dev-stamp" alt="npm downloads"></a>
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License">
+</div>
+
+<div align="center">
+  <a href="https://sonarcloud.io/summary/new_code?id=antoinezanardi_dev-stamp"><img src="https://sonarcloud.io/api/project_badges/measure?project=antoinezanardi_dev-stamp&metric=alert_status" alt="SonarQube Quality Gate"></a>
+  <a href="https://dashboard.stryker-mutator.io/reports/github.com/antoinezanardi/dev-stamp/main"><img src="https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fantoinezanardi%2Fdev-stamp%2Fmain" alt="Mutation testing badge"></a>
+</div>
 
 ---
 
@@ -14,8 +23,8 @@
 - [🚀 What is Dev Stamp?](#-what-is-dev-stamp)
 - [🎯 Use Cases](#-use-cases)
 - [🔥 Why You'll Love It](#-why-youll-love-it)
-- [📦 Installation](#-installation)
 - [✍️ Quick Example](#-quick-example)
+- [📦 Installation](#-installation)
 - [🛠️ Advanced Usage](#-advanced-usage)
 - [🧪 Robustness](#-robustness)
 - [⚖️ License](#-license)
@@ -50,18 +59,6 @@ Whether you're building apps, sites, or web widgets – Dev Stamp leaves your *d
 
 ---
 
-## 📦 Installation
-
-```bash
-npm i dev-stamp --save-dev
-# or
-yarn add -D dev-stamp
-# or
-pnpm add -D dev-stamp
-```
-
----
-
 ## ✍️ Quick Example
 
 ```ts
@@ -82,6 +79,30 @@ stampInHtml("💮 Made with love by [Your Name]");
     <!-- 💮 Made with love by [Your Name] -->
   </body>
 </html>
+```
+
+---
+
+## 📦 Installation
+
+If you're using **npm**, **yarn**, or **pnpm**, you can install **Dev Stamp** with the following command:
+
+```bash
+npm i dev-stamp --save-dev
+# or
+yarn add -D dev-stamp
+# or
+pnpm add -D dev-stamp
+```
+
+If you want to use **Dev Stamp** in a browser environment, you can include it via a `<script type="module">` tag, which is supported by all modern browsers:
+
+```html
+<script type="module">
+  import { stampInHtml } from "https://cdn.jsdelivr.net/npm/dev-stamp/dist/index.js";
+
+  stampInHtml("Hello from CDN 🪴");
+</script>
 ```
 
 ---
@@ -108,9 +129,27 @@ stampInHtml("💮 Made with love by [Your Name]", options);
 
 ## 🧪 Robustness
 
+### 💯 Unit Testing
+
 Dev Stamp is designed to be robust and handle various scenarios.
 
 To achieve this, it is 100% unit tested with [Vitest](https://vitest.dev/) and has 100% code coverage.
+
+### 🐋 SonarCloud
+
+The code quality is continuously monitored using [SonarCloud](https://sonarcloud.io/).
+
+You can check the code quality by clicking on the badge below:
+
+[![SonarCloud Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=antoinezanardi_dev-stamp&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=antoinezanardi_dev-stamp)
+
+### 👽 Mutation Testing
+
+[StrykerJS](https://stryker-mutator.io/) is used to ensure the code is resilient to mutations.
+
+You can check the mutation testing results by clicking on the badges below:
+
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fantoinezanardi%2Fdev-stamp%2Fmain)](https://dashboard.stryker-mutator.io/reports/github.com/antoinezanardi/dev-stamp/main)
 
 ---
 

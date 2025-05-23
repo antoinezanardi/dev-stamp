@@ -1,12 +1,7 @@
 import type { StampOptions } from "@/index.types";
 import { DEFAULT_STAMP_OPTIONS } from "@/index.constants";
-
-function getStampOptions(options: Partial<StampOptions>): StampOptions {
-  return {
-    ...DEFAULT_STAMP_OPTIONS,
-    ...options,
-  };
-}
+import { stampCommentInHtml } from "@/modes/comment/comment";
+import { getStampOptions } from "@/utils/utils";
 
 function stampInHtml(message: string, options: Partial<StampOptions> = DEFAULT_STAMP_OPTIONS): void {
   if (typeof window === "undefined" || typeof window.document === "undefined") {
@@ -22,12 +17,10 @@ function stampInHtml(message: string, options: Partial<StampOptions> = DEFAULT_S
 
     return;
   }
-  const commentNode = window.document.createComment(message);
-  targetElement.appendChild(commentNode);
+  stampCommentInHtml(message, targetElement);
 }
 
 export {
-  getStampOptions,
   stampInHtml,
 };
 
