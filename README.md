@@ -160,7 +160,7 @@ stampInHtml("💮 Made with love by [Your Name]", options);
 1. **Comment**: Injects a comment at the end of the `body` tag (by default).
 2. **Meta Tag**: Injects a meta tag in the `head` section of the HTML.
 
-You can choose the mode by setting the `mode` option in the `StampOptions`.
+You can choose the mode by setting the `mode` option in the `StampOptions` described below.
 
 ### 🦋 Options
 
