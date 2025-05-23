@@ -10,10 +10,6 @@ import * as Utils from "@/utils/utils";
 describe("Dev Stamp Index", () => {
   describe(stampInHtml, () => {
     beforeEach(() => {
-      globalThis.window = window as unknown as typeof globalThis.window;
-      globalThis.document = document as unknown as Document;
-      window.document.body.innerHTML = "<body><h1>Title</h1><p>Text</p></body>";
-
       vi.spyOn(CommentMode, "stampCommentInHtml").mockImplementation(vi.fn());
       vi.spyOn(MetaTagMode, "stampMetaTagInHtml").mockImplementation(vi.fn());
       vi.spyOn(Utils, "getStampOptions").mockReturnValue(DEFAULT_STAMP_OPTIONS);

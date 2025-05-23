@@ -8,10 +8,8 @@ beforeEach(() => {
   globalThis.document = document as unknown as typeof globalThis.document;
 
   window.document.body.innerHTML = `
-    <body>
-        <h1>Title</h1>
-        <p>Text</p>
-    </body>
+    <h1>Title</h1>
+    <p>Text</p>
   `;
   window.document.head.innerHTML = "";
 });
