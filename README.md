@@ -20,19 +20,19 @@
 
 ## 📜 Table of Contents
 
-- [🚀 What is Dev Stamp?](#-what-is-dev-stamp)
+- [💮 What is Dev Stamp?](#-what-is-dev-stamp)
 - [🎯 Use Cases](#-use-cases)
 - [🔥 Why You'll Love It](#-why-youll-love-it)
-- [✍️ Quick Example](#-quick-example)
+- [🚀 Quick Example](#-quick-example)
 - [📦 Installation](#-installation)
-- [🛠️ Advanced Usage](#-advanced-usage)
+- [🔧 Advanced Usage](#-advanced-usage)
 - [🧪 Robustness](#-robustness)
-- [⚖️ License](#-license)
+- [📃 License](#-license)
 - [👩‍💻 Contributing](#-contributing)
 
 ---
 
-## 🚀 What is Dev Stamp?
+## 💮 What is Dev Stamp?
 
 **Dev Stamp** is a tiny ⚡️ zero-config tool that lets you **inject custom content** (like build time, version, commit hash, or even a fun signature) right into the HTML of your project, anywhere.
 
@@ -61,7 +61,7 @@ Whether you're building apps, sites, or web widgets – Dev Stamp leaves your *d
 
 ---
 
-## ✍️ Quick Examples
+## 🚀 Quick Examples
 
 ### 💬 Inject a Comment
 
@@ -139,7 +139,7 @@ If you want to use **Dev Stamp** in a browser environment, you can include it vi
 
 ---
 
-## 🛠️ Advanced Usage
+## 🔧 Advanced Usage
 
 You can customize the stamp with various options, which can be passed as a second argument to the `stampInHtml` function.
 
@@ -206,7 +206,7 @@ You can check the mutation testing results by clicking on the badges below:
 
 ---
 
-## ⚖️ License
+## 📃 License
 
 Licensed under the [MIT License](https://opensource.org/licenses/MIT) 📄 – free as in freedom.
 
