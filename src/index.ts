@@ -1,4 +1,4 @@
-import type { StampMode, StampOptions } from "@/index.types";
+import type { StampMode, StampOptions, StampMetaTagOptions } from "@/index.types";
 import { DEFAULT_STAMP_OPTIONS } from "@/index.constants";
 import { stampCommentInHtml } from "@/modes/comment/comment";
 import { stampMetaTagInHtml } from "@/modes/meta-tag/meta-tag";
@@ -23,4 +23,7 @@ export {
   stampInHtml,
 };
 
-export type { StampOptions };
+export type {
+  StampOptions,
+  StampMetaTagOptions,
+};

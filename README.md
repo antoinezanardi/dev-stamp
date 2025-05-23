@@ -61,7 +61,9 @@ Whether you're building apps, sites, or web widgets – Dev Stamp leaves your *d
 
 ---
 
-## ✍️ Quick Example
+## ✍️ Quick Examples
+
+### 💬 Inject a Comment
 
 ```ts
 import { stampInHtml } from 'dev-stamp';
@@ -82,6 +84,34 @@ stampInHtml("💮 Made with love by [Your Name]");
   </body>
 </html>
 ```
+
+For more options, please refer to the [Advanced Usage](#-advanced-usage) section.
+
+### 🪄 Inject a Meta Tag
+
+```ts
+import { stampInHtml } from 'dev-stamp';
+
+stampInHtml("🚀 Project version 1.0.0", {
+  mode: "meta-tag",
+});
+```
+
+⬇️ This adds a meta-tag at the end of the `head` tag in your HTML.
+
+```html
+<html lang="en">
+  <head>
+    <title>My Project</title>
+    <meta name="dev-stamp" content="🚀 Project version 1.0.0">
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+```
+
+For more options, please refer to the [Advanced Usage](#-advanced-usage) section.
 
 ---
 
@@ -137,7 +167,7 @@ You can choose the mode by setting the `mode` option in the `StampOptions`.
 |      Field       |                    Type                    |                                             Description                                              |                          Default                           |
 |:----------------:|:------------------------------------------:|:----------------------------------------------------------------------------------------------------:|:----------------------------------------------------------:|
 | `targetSelector` |                  `string`                  | CSS selector to find the target element to inject the stamp. Only used if `mode` is set to `comment` |                          `"body"`                          |
-|      `mode`      |        `"comment"`<br/>`"meta-tag"`        |                           Mode of HTML injection: `comment` or `meta-tag`                            |                        `"comment"`                         |
+|      `mode`      |        `"comment"`<br/>`"meta-tag"`        |                                        Mode of HTML injection                                        |                        `"comment"`                         |
 |    `metaTag`     |  [StampMetaTagOptions](#meta-tag-options)  |        Options related to the `meta-tag` injection. Only used if `mode` is set to `meta-tag`         | Refer to [Meta Tag Options](#meta-tag-options) for details |
 
 
