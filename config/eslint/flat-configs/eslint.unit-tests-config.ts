@@ -1,8 +1,8 @@
 import Vitest from "@vitest/eslint-plugin";
 import type { Linter } from "eslint";
 
-const ESLINT_TESTS_CONFIG = {
-  name: "tests",
+const ESLINT_UNIT_TESTS_CONFIG = {
+  name: "unit-tests",
   files: ["src/**/*.spec.ts"],
   plugins: { vitest: Vitest },
   rules: {
@@ -92,4 +92,4 @@ const ESLINT_TESTS_CONFIG = {
   },
 } satisfies Linter.Config;
 
-export { ESLINT_TESTS_CONFIG };
+export { ESLINT_UNIT_TESTS_CONFIG };

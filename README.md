@@ -20,21 +20,23 @@
 
 ## 📜 Table of Contents
 
-- [🚀 What is Dev Stamp?](#-what-is-dev-stamp)
+- [💮 What is Dev Stamp?](#-what-is-dev-stamp)
 - [🎯 Use Cases](#-use-cases)
 - [🔥 Why You'll Love It](#-why-youll-love-it)
-- [✍️ Quick Example](#-quick-example)
+- [🚀 Quick Example](#-quick-example)
 - [📦 Installation](#-installation)
-- [🛠️ Advanced Usage](#-advanced-usage)
+- [🔧 Advanced Usage](#-advanced-usage)
 - [🧪 Robustness](#-robustness)
-- [⚖️ License](#-license)
+- [📃 License](#-license)
 - [👩‍💻 Contributing](#-contributing)
 
 ---
 
-## 🚀 What is Dev Stamp?
+## 💮 What is Dev Stamp?
 
 **Dev Stamp** is a tiny ⚡️ zero-config tool that lets you **inject custom content** (like build time, version, commit hash, or even a fun signature) right into the HTML of your project, anywhere.
+
+👉 Choose your injection mode: a comment in the `body` tag or a meta tag in the `head` section.
 
 Whether you're building apps, sites, or web widgets – Dev Stamp leaves your *dev mark* with style 💮.
 
@@ -59,7 +61,9 @@ Whether you're building apps, sites, or web widgets – Dev Stamp leaves your *d
 
 ---
 
-## ✍️ Quick Example
+## 🚀 Quick Examples
+
+### 💬 Inject a Comment
 
 ```ts
 import { stampInHtml } from 'dev-stamp';
@@ -80,6 +84,34 @@ stampInHtml("💮 Made with love by [Your Name]");
   </body>
 </html>
 ```
+
+For more options, please refer to the [Advanced Usage](#-advanced-usage) section.
+
+### 🪄 Inject a Meta Tag
+
+```ts
+import { stampInHtml } from 'dev-stamp';
+
+stampInHtml("🚀 Project version 1.0.0", {
+  mode: "meta-tag",
+});
+```
+
+⬇️ This adds a meta-tag at the end of the `head` tag in your HTML.
+
+```html
+<html lang="en">
+  <head>
+    <title>My Project</title>
+    <meta name="dev-stamp" content="🚀 Project version 1.0.0">
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+```
+
+For more options, please refer to the [Advanced Usage](#-advanced-usage) section.
 
 ---
 
@@ -107,7 +139,7 @@ If you want to use **Dev Stamp** in a browser environment, you can include it vi
 
 ---
 
-## 🛠️ Advanced Usage
+## 🔧 Advanced Usage
 
 You can customize the stamp with various options, which can be passed as a second argument to the `stampInHtml` function.
 
@@ -121,9 +153,30 @@ const options: StampOptions = {
 stampInHtml("💮 Made with love by [Your Name]", options);
 ```
 
-|      Option      |                         Description                         | Default |
-|:----------------:|:-----------------------------------------------------------:|:-------:|
-| `targetSelector` | CSS selector to find the target element to inject the stamp | `body`  |
+### 💡 Modes of Injection
+
+**Dev Stamp** supports two modes of injection:
+
+1. **Comment**: Injects a comment at the end of the `body` tag (by default).
+2. **Meta Tag**: Injects a meta tag in the `head` section of the HTML.
+
+You can choose the mode by setting the `mode` option in the `StampOptions` described below.
+
+### 🦋 Options
+
+|      Field       |                    Type                    |                                             Description                                              |                          Default                           |
+|:----------------:|:------------------------------------------:|:----------------------------------------------------------------------------------------------------:|:----------------------------------------------------------:|
+| `targetSelector` |                  `string`                  | CSS selector to find the target element to inject the stamp. Only used if `mode` is set to `comment` |                          `"body"`                          |
+|      `mode`      |        `"comment"`<br/>`"meta-tag"`        |                                        Mode of HTML injection                                        |                        `"comment"`                         |
+|    `metaTag`     |  [StampMetaTagOptions](#meta-tag-options)  |        Options related to the `meta-tag` injection. Only used if `mode` is set to `meta-tag`         | Refer to [Meta Tag Options](#meta-tag-options) for details |
+
+
+#### Meta Tag Options
+
+|    Field    |   Type    |                         Description                          |    Default    |
+|:-----------:|:---------:|:------------------------------------------------------------:|:-------------:|
+|   `name`    | `string`  |             Name of the meta tag to be injected              | `"dev-stamp"` |
+| `overwrite` | `boolean` | Whether to overwrite an existing meta tag with the same name |    `true`     |
 
 ---
 
@@ -153,7 +206,7 @@ You can check the mutation testing results by clicking on the badges below:
 
 ---
 
-## ⚖️ License
+## 📃 License
 
 Licensed under the [MIT License](https://opensource.org/licenses/MIT) 📄 – free as in freedom.
 

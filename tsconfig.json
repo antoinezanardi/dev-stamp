@@ -37,6 +37,7 @@
     "eslint.config.ts",
     "release.config.mjs",
     "src/**/*",
-    "config/**/*"
+    "config/**/*",
+    "tests/**/*",
   ],
 }
