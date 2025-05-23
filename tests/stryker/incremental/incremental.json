@@ -5,80 +5,81 @@
       "mutants": [
         {
           "id": "1",
-          "mutatorName": "ConditionalExpression",
-          "replacement": "true",
-          "statusReason": "src/index.ts(20,3): error TS18047: 'targetElement' is possibly 'null'.\n",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "statusReason": "src/index.ts(9,9): error TS2739: Type '{}' is missing the following properties from type 'Record<StampMode, () => void>': comment, \"meta-tag\"\n",
           "status": "CompileError",
           "static": false,
           "coveredBy": [
             "0",
             "1",
             "2",
-            "3",
-            "4"
+            "3"
           ],
           "location": {
             "end": {
-              "column": 78,
-              "line": 6
+              "column": 4,
+              "line": 12
             },
             "start": {
-              "column": 7,
-              "line": 6
-            }
-          }
-        },
-        {
-          "id": "3",
-          "mutatorName": "LogicalOperator",
-          "replacement": "typeof window === \"undefined\" && typeof window.document === \"undefined\"",
-          "statusReason": "src/index.ts(6,54): error TS2339: Property 'document' does not exist on type 'never'.\n",
-          "status": "CompileError",
-          "static": false,
-          "coveredBy": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4"
-          ],
-          "location": {
-            "end": {
-              "column": 78,
-              "line": 6
-            },
-            "start": {
-              "column": 7,
-              "line": 6
+              "column": 55,
+              "line": 9
             }
           }
         },
         {
           "id": "2",
-          "mutatorName": "ConditionalExpression",
-          "replacement": "false",
-          "statusReason": "Cannot read properties of undefined (reading 'document')",
+          "mutatorName": "ArrowFunction",
+          "replacement": "() => undefined",
+          "statusReason": "expected \"stampCommentInHtml\" to be called once with arguments: [ 'Hello Dark Jess\\' 🪄', …(1) ]\u001b[90m\n\nNumber of calls: \u001b[1m0\u001b[22m\n\u001b[39m",
           "status": "Killed",
           "static": false,
-          "testsCompleted": 1,
+          "testsCompleted": 2,
           "killedBy": [
-            "0"
+            "1"
           ],
           "coveredBy": [
             "0",
             "1",
             "2",
-            "3",
-            "4"
+            "3"
           ],
           "location": {
             "end": {
-              "column": 78,
-              "line": 6
+              "column": 64,
+              "line": 10
             },
             "start": {
-              "column": 7,
-              "line": 6
+              "column": 16,
+              "line": 10
+            }
+          }
+        },
+        {
+          "id": "3",
+          "mutatorName": "ArrowFunction",
+          "replacement": "() => undefined",
+          "statusReason": "expected \"stampMetaTagInHtml\" to be called once with arguments: [ 'Hello Dark Jess\\' 🪄', …(1) ]\u001b[90m\n\nNumber of calls: \u001b[1m0\u001b[22m\n\u001b[39m",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 3,
+          "killedBy": [
+            "2"
+          ],
+          "coveredBy": [
+            "0",
+            "1",
+            "2",
+            "3"
+          ],
+          "location": {
+            "end": {
+              "column": 65,
+              "line": 11
+            },
+            "start": {
+              "column": 17,
+              "line": 11
             }
           }
         },
@@ -86,7 +87,7 @@
           "id": "0",
           "mutatorName": "BlockStatement",
           "replacement": "{}",
-          "statusReason": "expected \"error\" to be called with arguments: [ Array(1) ]\u001b[90m\n\nNumber of calls: \u001b[1m0\u001b[22m\n\u001b[39m",
+          "statusReason": "expected \"validateBrowserEnvironment\" to be called once with arguments: []\u001b[90m\n\nNumber of calls: \u001b[1m0\u001b[22m\n\u001b[39m",
           "status": "Killed",
           "static": false,
           "testsCompleted": 1,
@@ -97,180 +98,24 @@
             "0",
             "1",
             "2",
-            "3",
-            "4"
+            "3"
           ],
           "location": {
             "end": {
               "column": 2,
-              "line": 21
+              "line": 20
             },
             "start": {
               "column": 101,
-              "line": 5
-            }
-          }
-        },
-        {
-          "id": "5",
-          "mutatorName": "EqualityOperator",
-          "replacement": "typeof window !== \"undefined\"",
-          "statusReason": "src/index.ts(6,54): error TS2339: Property 'document' does not exist on type 'never'.\nsrc/index.ts(13,32): error TS2339: Property 'document' does not exist on type 'never'.\nsrc/index.ts(19,30): error TS2339: Property 'document' does not exist on type 'never'.\n",
-          "status": "CompileError",
-          "static": false,
-          "coveredBy": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4"
-          ],
-          "location": {
-            "end": {
-              "column": 36,
-              "line": 6
-            },
-            "start": {
-              "column": 7,
-              "line": 6
-            }
-          }
-        },
-        {
-          "id": "6",
-          "mutatorName": "StringLiteral",
-          "replacement": "\"\"",
-          "statusReason": "src/index.ts(6,7): error TS2367: This comparison appears to be unintentional because the types '\"string\" | \"number\" | \"bigint\" | \"boolean\" | \"symbol\" | \"undefined\" | \"object\" | \"function\"' and '\"\"' have no overlap.\nsrc/index.ts(6,45): error TS2339: Property 'document' does not exist on type 'never'.\nsrc/index.ts(13,32): error TS2339: Property 'document' does not exist on type 'never'.\nsrc/index.ts(19,30): error TS2339: Property 'document' does not exist on type 'never'.\n",
-          "status": "CompileError",
-          "static": false,
-          "coveredBy": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4"
-          ],
-          "location": {
-            "end": {
-              "column": 36,
-              "line": 6
-            },
-            "start": {
-              "column": 25,
-              "line": 6
-            }
-          }
-        },
-        {
-          "id": "7",
-          "mutatorName": "ConditionalExpression",
-          "replacement": "false",
-          "statusReason": "Cannot read properties of undefined (reading 'querySelector')",
-          "status": "Killed",
-          "static": false,
-          "testsCompleted": 1,
-          "killedBy": [
-            "1"
-          ],
-          "coveredBy": [
-            "1",
-            "2",
-            "3",
-            "4"
-          ],
-          "location": {
-            "end": {
-              "column": 78,
-              "line": 6
-            },
-            "start": {
-              "column": 40,
-              "line": 6
+              "line": 7
             }
           }
         },
         {
           "id": "4",
-          "mutatorName": "ConditionalExpression",
-          "replacement": "false",
-          "statusReason": "Cannot read properties of undefined (reading 'document')",
-          "status": "Killed",
-          "static": false,
-          "testsCompleted": 1,
-          "killedBy": [
-            "0"
-          ],
-          "coveredBy": [
-            "0",
-            "1",
-            "2",
-            "3",
-            "4"
-          ],
-          "location": {
-            "end": {
-              "column": 36,
-              "line": 6
-            },
-            "start": {
-              "column": 7,
-              "line": 6
-            }
-          }
-        },
-        {
-          "id": "8",
-          "mutatorName": "EqualityOperator",
-          "replacement": "typeof window.document !== \"undefined\"",
-          "statusReason": "src/index.ts(13,41): error TS2339: Property 'querySelector' does not exist on type 'never'.\nsrc/index.ts(19,39): error TS2339: Property 'createComment' does not exist on type 'never'.\n",
-          "status": "CompileError",
-          "static": false,
-          "coveredBy": [
-            "1",
-            "2",
-            "3",
-            "4"
-          ],
-          "location": {
-            "end": {
-              "column": 78,
-              "line": 6
-            },
-            "start": {
-              "column": 40,
-              "line": 6
-            }
-          }
-        },
-        {
-          "id": "9",
-          "mutatorName": "StringLiteral",
-          "replacement": "\"\"",
-          "statusReason": "src/index.ts(6,40): error TS2367: This comparison appears to be unintentional because the types '\"string\" | \"number\" | \"bigint\" | \"boolean\" | \"symbol\" | \"undefined\" | \"object\" | \"function\"' and '\"\"' have no overlap.\nsrc/index.ts(13,41): error TS2339: Property 'querySelector' does not exist on type 'never'.\nsrc/index.ts(19,39): error TS2339: Property 'createComment' does not exist on type 'never'.\n",
-          "status": "CompileError",
-          "static": false,
-          "coveredBy": [
-            "1",
-            "2",
-            "3",
-            "4"
-          ],
-          "location": {
-            "end": {
-              "column": 78,
-              "line": 6
-            },
-            "start": {
-              "column": 67,
-              "line": 6
-            }
-          }
-        },
-        {
-          "id": "10",
           "mutatorName": "BlockStatement",
           "replacement": "{}",
-          "statusReason": "Cannot read properties of undefined (reading 'document')",
+          "statusReason": "expected \"validateBrowserEnvironment\" to be called once with arguments: []\u001b[90m\n\nNumber of calls: \u001b[1m0\u001b[22m\n\u001b[39m",
           "status": "Killed",
           "static": false,
           "testsCompleted": 1,
@@ -279,179 +124,66 @@
           ],
           "coveredBy": [
             "0",
-            "1"
+            "1",
+            "2",
+            "3"
           ],
           "location": {
             "end": {
               "column": 4,
-              "line": 10
+              "line": 17
             },
             "start": {
-              "column": 80,
-              "line": 6
+              "column": 7,
+              "line": 14
             }
           }
         },
         {
-          "id": "11",
-          "mutatorName": "StringLiteral",
-          "replacement": "\"\"",
-          "statusReason": "expected \"error\" to be called with arguments: [ Array(1) ]\u001b[90m\n\nReceived: \n\n\u001b[1m  1st error call:\n\n\u001b[22m\u001b[2m  [\u001b[22m\n\u001b[32m-   \"This function can only be run in a browser environment.\",\u001b[90m\n\u001b[31m+   \"\",\u001b[90m\n\u001b[2m  ]\u001b[22m\n\u001b[39m\u001b[90m\n\nNumber of calls: \u001b[1m1\u001b[22m\n\u001b[39m",
+          "id": "5",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "statusReason": "expected \"error\" to be called with arguments: [ Error: Test error ]\u001b[90m\n\nNumber of calls: \u001b[1m0\u001b[22m\n\u001b[39m",
           "status": "Killed",
           "static": false,
           "testsCompleted": 1,
           "killedBy": [
-            "0"
+            "3"
           ],
           "coveredBy": [
-            "0",
-            "1"
-          ],
-          "location": {
-            "end": {
-              "column": 76,
-              "line": 7
-            },
-            "start": {
-              "column": 19,
-              "line": 7
-            }
-          }
-        },
-        {
-          "id": "12",
-          "mutatorName": "BooleanLiteral",
-          "replacement": "targetElement",
-          "statusReason": "src/index.ts(20,3): error TS18047: 'targetElement' is possibly 'null'.\n",
-          "status": "CompileError",
-          "static": false,
-          "coveredBy": [
-            "2",
-            "3",
-            "4"
-          ],
-          "location": {
-            "end": {
-              "column": 21,
-              "line": 14
-            },
-            "start": {
-              "column": 7,
-              "line": 14
-            }
-          }
-        },
-        {
-          "id": "13",
-          "mutatorName": "ConditionalExpression",
-          "replacement": "true",
-          "statusReason": "src/index.ts(20,3): error TS18047: 'targetElement' is possibly 'null'.\n",
-          "status": "CompileError",
-          "static": false,
-          "coveredBy": [
-            "2",
-            "3",
-            "4"
-          ],
-          "location": {
-            "end": {
-              "column": 21,
-              "line": 14
-            },
-            "start": {
-              "column": 7,
-              "line": 14
-            }
-          }
-        },
-        {
-          "id": "15",
-          "mutatorName": "BlockStatement",
-          "replacement": "{}",
-          "statusReason": "src/index.ts(16,3): error TS18047: 'targetElement' is possibly 'null'.\n",
-          "status": "CompileError",
-          "static": false,
-          "coveredBy": [
-            "2"
+            "3"
           ],
           "location": {
             "end": {
               "column": 4,
-              "line": 18
-            },
-            "start": {
-              "column": 23,
-              "line": 14
-            }
-          }
-        },
-        {
-          "id": "14",
-          "mutatorName": "ConditionalExpression",
-          "replacement": "false",
-          "statusReason": "src/index.ts(20,3): error TS18047: 'targetElement' is possibly 'null'.\n",
-          "status": "CompileError",
-          "static": false,
-          "coveredBy": [
-            "2",
-            "3",
-            "4"
-          ],
-          "location": {
-            "end": {
-              "column": 21,
-              "line": 14
-            },
-            "start": {
-              "column": 7,
-              "line": 14
-            }
-          }
-        },
-        {
-          "id": "16",
-          "mutatorName": "StringLiteral",
-          "replacement": "``",
-          "statusReason": "expected \"error\" to be called with arguments: [ Array(1) ]\u001b[90m\n\nReceived: \n\n\u001b[1m  1st error call:\n\n\u001b[22m\u001b[2m  [\u001b[22m\n\u001b[32m-   \"Target element not found: #nonexistent\",\u001b[90m\n\u001b[31m+   \"\",\u001b[90m\n\u001b[2m  ]\u001b[22m\n\u001b[39m\u001b[90m\n\nNumber of calls: \u001b[1m1\u001b[22m\n\u001b[39m",
-          "status": "Killed",
-          "static": false,
-          "testsCompleted": 1,
-          "killedBy": [
-            "2"
-          ],
-          "coveredBy": [
-            "2"
-          ],
-          "location": {
-            "end": {
-              "column": 64,
-              "line": 15
+              "line": 19
             },
             "start": {
               "column": 19,
-              "line": 15
+              "line": 17
             }
           }
         }
       ],
-      "source": "import type { StampOptions } from \"@/index.types\";\nimport { DEFAULT_STAMP_OPTIONS } from \"@/index.constants\";\nimport { getStampOptions } from \"@/utils/utils\";\n\nfunction stampInHtml(message: string, options: Partial<StampOptions> = DEFAULT_STAMP_OPTIONS): void {\n  if (typeof window === \"undefined\" || typeof window.document === \"undefined\") {\n    console.error(\"This function can only be run in a browser environment.\");\n\n    return;\n  }\n  const mergedOptions = getStampOptions(options);\n  const { targetSelector } = mergedOptions;\n  const targetElement = window.document.querySelector(targetSelector);\n  if (!targetElement) {\n    console.error(`Target element not found: ${targetSelector}`);\n\n    return;\n  }\n  const commentNode = window.document.createComment(message);\n  targetElement.appendChild(commentNode);\n}\n\nexport {\n  stampInHtml,\n};\n\nexport type { StampOptions };"
+      "source": "import type { StampMode, StampOptions } from \"@/index.types\";\nimport { DEFAULT_STAMP_OPTIONS } from \"@/index.constants\";\nimport { stampCommentInHtml } from \"@/modes/comment/comment\";\nimport { stampMetaTagInHtml } from \"@/modes/meta-tag/meta-tag\";\nimport { getStampOptions, validateBrowserEnvironment } from \"@/utils/utils\";\n\nfunction stampInHtml(message: string, options: Partial<StampOptions> = DEFAULT_STAMP_OPTIONS): void {\n  const mergedOptions = getStampOptions(options);\n  const stampMethods: Record<StampMode, () => void> = {\n    \"comment\": () => stampCommentInHtml(message, mergedOptions),\n    \"meta-tag\": () => stampMetaTagInHtml(message, mergedOptions),\n  };\n\n  try {\n    validateBrowserEnvironment();\n    stampMethods[mergedOptions.mode]();\n  } catch (error) {\n    console.error(error);\n  }\n}\n\nexport {\n  stampInHtml,\n};\n\nexport type { StampOptions };"
     },
-    "src/utils/utils.ts": {
+    "src/modes/comment/comment.ts": {
       "language": "typescript",
       "mutants": [
         {
-          "id": "17",
+          "id": "6",
           "mutatorName": "BlockStatement",
           "replacement": "{}",
-          "statusReason": "src/utils/utils.ts(4,59): error TS2355: A function whose declared type is neither 'undefined', 'void', nor 'any' must return a value.\n",
-          "status": "CompileError",
+          "statusReason": "expected \"getTargetElement\" to be called with arguments: [ 'body' ]\u001b[90m\n\nNumber of calls: \u001b[1m0\u001b[22m\n\u001b[39m",
+          "status": "Killed",
           "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "15"
+          ],
           "coveredBy": [
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"
+            "15",
+            "16"
           ],
           "location": {
             "end": {
@@ -459,38 +191,908 @@
               "line": 9
             },
             "start": {
-              "column": 72,
+              "column": 75,
               "line": 4
+            }
+          }
+        }
+      ],
+      "source": "import type { StampOptions } from \"@/index.types\";\nimport { getTargetElement } from \"@/utils/utils\";\n\nfunction stampCommentInHtml(message: string, options: StampOptions): void {\n  const { targetSelector } = options;\n  const targetElement = getTargetElement(targetSelector);\n  const commentNode = window.document.createComment(message);\n  targetElement.appendChild(commentNode);\n}\n\nexport { stampCommentInHtml };"
+    },
+    "src/modes/meta-tag/meta-tag.ts": {
+      "language": "typescript",
+      "mutants": [
+        {
+          "id": "7",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "statusReason": "expected \"setAttribute\" to be called once with arguments: [ 'content', 'Hello Dark Jess\\' 🪄' ]\u001b[90m\n\nNumber of calls: \u001b[1m0\u001b[22m\n\u001b[39m",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "11"
+          ],
+          "coveredBy": [
+            "11",
+            "12",
+            "14"
+          ],
+          "location": {
+            "end": {
+              "column": 2,
+              "line": 11
+            },
+            "start": {
+              "column": 112,
+              "line": 3
+            }
+          }
+        },
+        {
+          "id": "8",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "doesOverride",
+          "statusReason": "expected \"setAttribute\" to be called once with arguments: [ 'content', 'Hello Dark Jess\\' 🪄' ]\u001b[90m\n\nNumber of calls: \u001b[1m0\u001b[22m\n\u001b[39m",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "11"
+          ],
+          "coveredBy": [
+            "11",
+            "12",
+            "14"
+          ],
+          "location": {
+            "end": {
+              "column": 20,
+              "line": 5
+            },
+            "start": {
+              "column": 7,
+              "line": 5
+            }
+          }
+        },
+        {
+          "id": "9",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "statusReason": "expected \"setAttribute\" to be called once with arguments: [ 'content', 'Hello Dark Jess\\' 🪄' ]\u001b[90m\n\nNumber of calls: \u001b[1m0\u001b[22m\n\u001b[39m",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "11"
+          ],
+          "coveredBy": [
+            "11",
+            "12",
+            "14"
+          ],
+          "location": {
+            "end": {
+              "column": 20,
+              "line": 5
+            },
+            "start": {
+              "column": 7,
+              "line": 5
+            }
+          }
+        },
+        {
+          "id": "10",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "statusReason": "expected \"error\" to be called once with arguments: [ Array(1) ]\u001b[90m\n\nNumber of calls: \u001b[1m0\u001b[22m\n\u001b[39m",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 2,
+          "killedBy": [
+            "12"
+          ],
+          "coveredBy": [
+            "11",
+            "12",
+            "14"
+          ],
+          "location": {
+            "end": {
+              "column": 20,
+              "line": 5
+            },
+            "start": {
+              "column": 7,
+              "line": 5
+            }
+          }
+        },
+        {
+          "id": "12",
+          "mutatorName": "StringLiteral",
+          "replacement": "``",
+          "statusReason": "expected \"error\" to be called once with arguments: [ Array(1) ]\u001b[90m\n\nReceived: \n\n\u001b[1m  1st error call:\n\n\u001b[22m\u001b[2m  [\u001b[22m\n\u001b[32m-   \"Meta tag with name \\\"description\\\" already exists. Use \\\"overwrite\\\" option to replace it.\",\u001b[90m\n\u001b[31m+   \"\",\u001b[90m\n\u001b[2m  ]\u001b[22m\n\u001b[39m\u001b[90m\n\nNumber of calls: \u001b[1m1\u001b[22m\n\u001b[39m",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "12"
+          ],
+          "coveredBy": [
+            "12"
+          ],
+          "location": {
+            "end": {
+              "column": 111,
+              "line": 6
+            },
+            "start": {
+              "column": 19,
+              "line": 6
+            }
+          }
+        },
+        {
+          "id": "11",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "statusReason": "expected \"error\" to be called once with arguments: [ Array(1) ]\u001b[90m\n\nNumber of calls: \u001b[1m0\u001b[22m\n\u001b[39m",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "12"
+          ],
+          "coveredBy": [
+            "12"
+          ],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 9
+            },
+            "start": {
+              "column": 22,
+              "line": 5
+            }
+          }
+        },
+        {
+          "id": "13",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "statusReason": "Uncaught InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': '' is not a valid attribute name.",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "11"
+          ],
+          "coveredBy": [
+            "11",
+            "14"
+          ],
+          "location": {
+            "end": {
+              "column": 41,
+              "line": 10
+            },
+            "start": {
+              "column": 32,
+              "line": 10
+            }
+          }
+        },
+        {
+          "id": "16",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "statusReason": "src/modes/meta-tag/meta-tag.ts(18,37): error TS2345: Argument of type 'Element | null' is not assignable to parameter of type 'Element'.\n  Type 'null' is not assignable to type 'Element'.\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "13",
+            "14"
+          ],
+          "location": {
+            "end": {
+              "column": 22,
+              "line": 17
+            },
+            "start": {
+              "column": 7,
+              "line": 17
+            }
+          }
+        },
+        {
+          "id": "17",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "statusReason": "src/modes/meta-tag/meta-tag.ts(18,37): error TS2345: Argument of type 'Element | null' is not assignable to parameter of type 'Element'.\n  Type 'null' is not assignable to type 'Element'.\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "13",
+            "14"
+          ],
+          "location": {
+            "end": {
+              "column": 22,
+              "line": 17
+            },
+            "start": {
+              "column": 7,
+              "line": 17
+            }
+          }
+        },
+        {
+          "id": "15",
+          "mutatorName": "StringLiteral",
+          "replacement": "``",
+          "statusReason": "Failed to execute 'querySelector' on 'HTMLHeadElement': The provided selector is empty.",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "13"
+          ],
+          "coveredBy": [
+            "13",
+            "14"
+          ],
+          "location": {
+            "end": {
+              "column": 68,
+              "line": 16
+            },
+            "start": {
+              "column": 46,
+              "line": 16
+            }
+          }
+        },
+        {
+          "id": "14",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "statusReason": "expected \"appendChild\" to be called once with arguments: [ HTMLMetaElement{ …(46) } ]\u001b[90m\n\nNumber of calls: \u001b[1m0\u001b[22m\n\u001b[39m",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "13"
+          ],
+          "coveredBy": [
+            "13",
+            "14"
+          ],
+          "location": {
+            "end": {
+              "column": 2,
+              "line": 26
+            },
+            "start": {
+              "column": 75,
+              "line": 13
             }
           }
         },
         {
           "id": "18",
-          "mutatorName": "ObjectLiteral",
+          "mutatorName": "BlockStatement",
           "replacement": "{}",
-          "statusReason": "src/utils/utils.ts(5,3): error TS2741: Property 'targetSelector' is missing in type '{}' but required in type 'StampOptions'.\n",
-          "status": "CompileError",
+          "statusReason": "expected null to be 'Hello Dark Jess\\' 🪄' // Object.is equality",
+          "status": "Killed",
           "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "14"
+          ],
           "coveredBy": [
-            "2",
-            "3",
+            "14"
+          ],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 21
+            },
+            "start": {
+              "column": 24,
+              "line": 17
+            }
+          }
+        },
+        {
+          "id": "20",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "statusReason": "Uncaught InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': '' is not a valid attribute name.",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "13"
+          ],
+          "coveredBy": [
+            "13"
+          ],
+          "location": {
+            "end": {
+              "column": 30,
+              "line": 23
+            },
+            "start": {
+              "column": 24,
+              "line": 23
+            }
+          }
+        },
+        {
+          "id": "19",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "statusReason": "Failed to execute 'createElementNS' on 'Document': The qualified name provided is empty.",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "13"
+          ],
+          "coveredBy": [
+            "13"
+          ],
+          "location": {
+            "end": {
+              "column": 55,
+              "line": 22
+            },
+            "start": {
+              "column": 49,
+              "line": 22
+            }
+          }
+        },
+        {
+          "id": "21",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "statusReason": "Uncaught InvalidCharacterError: Failed to execute 'setAttribute' on 'Element': '' is not a valid attribute name.",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "13"
+          ],
+          "coveredBy": [
+            "13"
+          ],
+          "location": {
+            "end": {
+              "column": 33,
+              "line": 24
+            },
+            "start": {
+              "column": 24,
+              "line": 24
+            }
+          }
+        }
+      ],
+      "source": "import type { StampMetaTagOptions, StampOptions } from \"@/index.types\";\n\nfunction stampOnExistingMetaTag(message: string, existingMetaTag: Element, options: StampMetaTagOptions): void {\n  const { overwrite: doesOverride } = options;\n  if (!doesOverride) {\n    console.error(`Meta tag with name \"${options.name}\" already exists. Use \"overwrite\" option to replace it.`);\n\n    return;\n  }\n  existingMetaTag.setAttribute(\"content\", message);\n}\n\nfunction stampMetaTagInHtml(message: string, options: StampOptions): void {\n  const { head } = window.document;\n  const { name } = options.metaTag;\n  const existingMetaTag = head.querySelector(`meta[name=\"${name}\"]`);\n  if (existingMetaTag) {\n    stampOnExistingMetaTag(message, existingMetaTag, options.metaTag);\n\n    return;\n  }\n  const metaTag = window.document.createElement(\"meta\");\n  metaTag.setAttribute(\"name\", name);\n  metaTag.setAttribute(\"content\", message);\n  head.appendChild(metaTag);\n}\n\nexport {\n  stampOnExistingMetaTag,\n  stampMetaTagInHtml,\n};"
+    },
+    "src/utils/utils.ts": {
+      "language": "typescript",
+      "mutants": [
+        {
+          "id": "22",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "statusReason": "expected [Function] to throw an error",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "4"
+          ],
+          "coveredBy": [
             "4",
             "5",
             "6"
           ],
           "location": {
             "end": {
-              "column": 4,
+              "column": 2,
               "line": 8
             },
             "start": {
-              "column": 10,
+              "column": 45,
+              "line": 4
+            }
+          }
+        },
+        {
+          "id": "23",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "statusReason": "expected [Function] to not throw an error but 'Error: This function can only be run …' was thrown",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 3,
+          "killedBy": [
+            "6"
+          ],
+          "coveredBy": [
+            "4",
+            "5",
+            "6"
+          ],
+          "location": {
+            "end": {
+              "column": 78,
               "line": 5
+            },
+            "start": {
+              "column": 7,
+              "line": 5
+            }
+          }
+        },
+        {
+          "id": "25",
+          "mutatorName": "LogicalOperator",
+          "replacement": "typeof window === \"undefined\" && typeof window.document === \"undefined\"",
+          "statusReason": "src/utils/utils.ts(5,54): error TS2339: Property 'document' does not exist on type 'never'.\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "4",
+            "5",
+            "6"
+          ],
+          "location": {
+            "end": {
+              "column": 78,
+              "line": 5
+            },
+            "start": {
+              "column": 7,
+              "line": 5
+            }
+          }
+        },
+        {
+          "id": "24",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "statusReason": "expected [Function] to throw an error",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "4"
+          ],
+          "coveredBy": [
+            "4",
+            "5",
+            "6"
+          ],
+          "location": {
+            "end": {
+              "column": 78,
+              "line": 5
+            },
+            "start": {
+              "column": 7,
+              "line": 5
+            }
+          }
+        },
+        {
+          "id": "27",
+          "mutatorName": "EqualityOperator",
+          "replacement": "typeof window !== \"undefined\"",
+          "statusReason": "src/utils/utils.ts(5,54): error TS2339: Property 'document' does not exist on type 'never'.\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "4",
+            "5",
+            "6"
+          ],
+          "location": {
+            "end": {
+              "column": 36,
+              "line": 5
+            },
+            "start": {
+              "column": 7,
+              "line": 5
+            }
+          }
+        },
+        {
+          "id": "26",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "statusReason": "expected [Function] to throw error including 'This function can only be run in a br…' but got 'Cannot read properties of undefined (…'",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "4"
+          ],
+          "coveredBy": [
+            "4",
+            "5",
+            "6"
+          ],
+          "location": {
+            "end": {
+              "column": 36,
+              "line": 5
+            },
+            "start": {
+              "column": 7,
+              "line": 5
+            }
+          }
+        },
+        {
+          "id": "28",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "statusReason": "src/utils/utils.ts(5,7): error TS2367: This comparison appears to be unintentional because the types '\"string\" | \"number\" | \"bigint\" | \"boolean\" | \"symbol\" | \"undefined\" | \"object\" | \"function\"' and '\"\"' have no overlap.\nsrc/utils/utils.ts(5,45): error TS2339: Property 'document' does not exist on type 'never'.\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "4",
+            "5",
+            "6"
+          ],
+          "location": {
+            "end": {
+              "column": 36,
+              "line": 5
+            },
+            "start": {
+              "column": 25,
+              "line": 5
+            }
+          }
+        },
+        {
+          "id": "29",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "statusReason": "expected [Function] to throw an error",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "5"
+          ],
+          "coveredBy": [
+            "5",
+            "6"
+          ],
+          "location": {
+            "end": {
+              "column": 78,
+              "line": 5
+            },
+            "start": {
+              "column": 40,
+              "line": 5
+            }
+          }
+        },
+        {
+          "id": "31",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "statusReason": "src/utils/utils.ts(5,40): error TS2367: This comparison appears to be unintentional because the types '\"string\" | \"number\" | \"bigint\" | \"boolean\" | \"symbol\" | \"undefined\" | \"object\" | \"function\"' and '\"\"' have no overlap.\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "5",
+            "6"
+          ],
+          "location": {
+            "end": {
+              "column": 78,
+              "line": 5
+            },
+            "start": {
+              "column": 67,
+              "line": 5
+            }
+          }
+        },
+        {
+          "id": "30",
+          "mutatorName": "EqualityOperator",
+          "replacement": "typeof window.document !== \"undefined\"",
+          "statusReason": "expected [Function] to throw an error",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "5"
+          ],
+          "coveredBy": [
+            "5",
+            "6"
+          ],
+          "location": {
+            "end": {
+              "column": 78,
+              "line": 5
+            },
+            "start": {
+              "column": 40,
+              "line": 5
+            }
+          }
+        },
+        {
+          "id": "34",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "statusReason": "src/utils/utils.ts(10,52): error TS2355: A function whose declared type is neither 'undefined', 'void', nor 'any' must return a value.\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "7",
+            "8"
+          ],
+          "location": {
+            "end": {
+              "column": 2,
+              "line": 16
+            },
+            "start": {
+              "column": 60,
+              "line": 10
+            }
+          }
+        },
+        {
+          "id": "35",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "targetElement",
+          "statusReason": "src/utils/utils.ts(15,3): error TS2322: Type 'null' is not assignable to type 'Element'.\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "7",
+            "8"
+          ],
+          "location": {
+            "end": {
+              "column": 21,
+              "line": 12
+            },
+            "start": {
+              "column": 7,
+              "line": 12
+            }
+          }
+        },
+        {
+          "id": "32",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "statusReason": "expected [Function] to throw an error",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "4"
+          ],
+          "coveredBy": [
+            "4",
+            "5"
+          ],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 7
+            },
+            "start": {
+              "column": 80,
+              "line": 5
+            }
+          }
+        },
+        {
+          "id": "33",
+          "mutatorName": "StringLiteral",
+          "replacement": "\"\"",
+          "statusReason": "expected [Function] to throw error including 'This function can only be run in a br…' but got ''",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "4"
+          ],
+          "coveredBy": [
+            "4",
+            "5"
+          ],
+          "location": {
+            "end": {
+              "column": 78,
+              "line": 6
+            },
+            "start": {
+              "column": 21,
+              "line": 6
+            }
+          }
+        },
+        {
+          "id": "36",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "statusReason": "src/utils/utils.ts(15,3): error TS2322: Type 'Element | null' is not assignable to type 'Element'.\n  Type 'null' is not assignable to type 'Element'.\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "7",
+            "8"
+          ],
+          "location": {
+            "end": {
+              "column": 21,
+              "line": 12
+            },
+            "start": {
+              "column": 7,
+              "line": 12
+            }
+          }
+        },
+        {
+          "id": "37",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "statusReason": "src/utils/utils.ts(15,3): error TS2322: Type 'Element | null' is not assignable to type 'Element'.\n  Type 'null' is not assignable to type 'Element'.\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "7",
+            "8"
+          ],
+          "location": {
+            "end": {
+              "column": 21,
+              "line": 12
+            },
+            "start": {
+              "column": 7,
+              "line": 12
+            }
+          }
+        },
+        {
+          "id": "38",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "statusReason": "src/utils/utils.ts(13,3): error TS2322: Type 'Element | null' is not assignable to type 'Element'.\n  Type 'null' is not assignable to type 'Element'.\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "7"
+          ],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 14
+            },
+            "start": {
+              "column": 23,
+              "line": 12
+            }
+          }
+        },
+        {
+          "id": "39",
+          "mutatorName": "StringLiteral",
+          "replacement": "``",
+          "statusReason": "expected [Function] to throw error including 'Target element not found: #nonexistent' but got ''",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "7"
+          ],
+          "coveredBy": [
+            "7"
+          ],
+          "location": {
+            "end": {
+              "column": 66,
+              "line": 13
+            },
+            "start": {
+              "column": 21,
+              "line": 13
+            }
+          }
+        },
+        {
+          "id": "40",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "statusReason": "src/utils/utils.ts(18,57): error TS2355: A function whose declared type is neither 'undefined', 'void', nor 'any' must return a value.\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "9",
+            "10"
+          ],
+          "location": {
+            "end": {
+              "column": 2,
+              "line": 27
+            },
+            "start": {
+              "column": 70,
+              "line": 18
+            }
+          }
+        },
+        {
+          "id": "41",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "statusReason": "src/utils/utils.ts(19,3): error TS2739: Type '{}' is missing the following properties from type 'StampOptions': mode, targetSelector, metaTag\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "9",
+            "10"
+          ],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 26
+            },
+            "start": {
+              "column": 10,
+              "line": 19
+            }
+          }
+        },
+        {
+          "id": "42",
+          "mutatorName": "ObjectLiteral",
+          "replacement": "{}",
+          "statusReason": "src/utils/utils.ts(22,5): error TS2739: Type '{}' is missing the following properties from type 'StampMetaTagOptions': name, overwrite\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "9",
+            "10"
+          ],
+          "location": {
+            "end": {
+              "column": 6,
+              "line": 25
+            },
+            "start": {
+              "column": 14,
+              "line": 22
             }
           }
         }
       ],
-      "source": "import { DEFAULT_STAMP_OPTIONS } from \"@/index.constants\";\nimport type { StampOptions } from \"@/index.types\";\n\nfunction getStampOptions(options: Partial<StampOptions>): StampOptions {\n  return {\n    ...DEFAULT_STAMP_OPTIONS,\n    ...options,\n  };\n}\n\nexport {\n  getStampOptions,\n};"
+      "source": "import { DEFAULT_STAMP_OPTIONS } from \"@/index.constants\";\nimport type { PartialStampOptions, StampOptions } from \"@/index.types\";\n\nfunction validateBrowserEnvironment(): void {\n  if (typeof window === \"undefined\" || typeof window.document === \"undefined\") {\n    throw new Error(\"This function can only be run in a browser environment.\");\n  }\n}\n\nfunction getTargetElement(targetSelector: string): Element {\n  const targetElement = window.document.querySelector(targetSelector);\n  if (!targetElement) {\n    throw new Error(`Target element not found: ${targetSelector}`);\n  }\n  return targetElement;\n}\n\nfunction getStampOptions(options: PartialStampOptions): StampOptions {\n  return {\n    ...DEFAULT_STAMP_OPTIONS,\n    ...options,\n    metaTag: {\n      ...DEFAULT_STAMP_OPTIONS.metaTag,\n      ...options.metaTag,\n    },\n  };\n}\n\nexport {\n  validateBrowserEnvironment,\n  getTargetElement,\n  getStampOptions,\n};"
     }
   },
   "schemaVersion": "1.0",
@@ -504,42 +1106,92 @@
       "tests": [
         {
           "id": "0",
-          "name": "Dev Stamp Index stampInHtml should log an error when not in a browser environment because window is undefined."
+          "name": "Dev Stamp Index stampInHtml should validate the browser environment when called."
         },
         {
           "id": "1",
-          "name": "Dev Stamp Index stampInHtml should log an error when not in a browser environment because document is undefined."
+          "name": "Dev Stamp Index stampInHtml should call the comment mode when the mode is comment."
         },
         {
           "id": "2",
-          "name": "Dev Stamp Index stampInHtml should log an error when the target element is not found."
+          "name": "Dev Stamp Index stampInHtml should call the meta tag mode when the mode is meta-tag."
         },
         {
           "id": "3",
-          "name": "Dev Stamp Index stampInHtml should append a comment node to the target element when called."
-        },
-        {
-          "id": "4",
-          "name": "Dev Stamp Index stampInHtml should append a comment node with the message specified in first argument to the target element when called."
+          "name": "Dev Stamp Index stampInHtml should log an error when one of the stamp methods throws an error."
         }
       ],
-      "source": "import { Node, Window } from \"happy-dom\";\nimport { describe } from \"vitest\";\n\nimport { stampInHtml } from \"@/index\";\n\nconst window = new Window({ url: \"https://localhost:8080\" });\nconst document = window.document;\n\ndescribe(\"Dev Stamp Index\", () => {\n  describe(stampInHtml, () => {\n    beforeEach(() => {\n      globalThis.window = window as unknown as typeof globalThis.window;\n      globalThis.document = document as unknown as Document;\n      window.document.body.innerHTML = \"<body><h1>Title</h1><p>Text</p></body>\";\n    });\n\n    it(\"should log an error when not in a browser environment because window is undefined.\", () => {\n      globalThis.window = undefined as unknown as typeof globalThis.window;\n      const consoleErrorSpy = vi.spyOn(console, \"error\").mockImplementation(vi.fn());\n      stampInHtml(\"Test message\");\n\n      expect(consoleErrorSpy).toHaveBeenCalledWith(\"This function can only be run in a browser environment.\");\n    });\n\n    it(\"should log an error when not in a browser environment because document is undefined.\", () => {\n      globalThis.window = {} as unknown as typeof globalThis.window;\n      const consoleErrorSpy = vi.spyOn(console, \"error\").mockImplementation(vi.fn());\n      stampInHtml(\"Test message\");\n\n      expect(consoleErrorSpy).toHaveBeenCalledWith(\"This function can only be run in a browser environment.\");\n    });\n\n    it(\"should log an error when the target element is not found.\", () => {\n      const consoleErrorSpy = vi.spyOn(console, \"error\").mockImplementation(vi.fn());\n      stampInHtml(\"Test message\", { targetSelector: \"#nonexistent\" });\n\n      expect(consoleErrorSpy).toHaveBeenCalledWith(\"Target element not found: #nonexistent\");\n    });\n\n    it(\"should append a comment node to the target element when called.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      stampInHtml(message);\n      const targetElement = window.document.querySelector(\"body\");\n      const appendedNode = targetElement?.lastChild;\n\n      expect(appendedNode?.nodeType).toBe(Node.COMMENT_NODE);\n    });\n\n    it(\"should append a comment node with the message specified in first argument to the target element when called.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      stampInHtml(message);\n      const targetElement = window.document.querySelector(\"body\");\n      const appendedNode = targetElement?.lastChild;\n\n      expect(appendedNode?.nodeValue).toBe(message);\n    });\n  });\n});"
+      "source": "import { describe } from \"vitest\";\n\nimport type { StampOptions } from \"@/index\";\nimport { stampInHtml } from \"@/index\";\nimport { DEFAULT_STAMP_OPTIONS } from \"@/index.constants\";\nimport * as CommentMode from \"@/modes/comment/comment\";\nimport * as MetaTagMode from \"@/modes/meta-tag/meta-tag\";\nimport * as Utils from \"@/utils/utils\";\n\ndescribe(\"Dev Stamp Index\", () => {\n  describe(stampInHtml, () => {\n    beforeEach(() => {\n      globalThis.window = window as unknown as typeof globalThis.window;\n      globalThis.document = document as unknown as Document;\n      window.document.body.innerHTML = \"<body><h1>Title</h1><p>Text</p></body>\";\n\n      vi.spyOn(CommentMode, \"stampCommentInHtml\").mockImplementation(vi.fn());\n      vi.spyOn(MetaTagMode, \"stampMetaTagInHtml\").mockImplementation(vi.fn());\n      vi.spyOn(Utils, \"getStampOptions\").mockReturnValue(DEFAULT_STAMP_OPTIONS);\n      vi.spyOn(Utils, \"validateBrowserEnvironment\").mockImplementation(vi.fn());\n    });\n\n    it(\"should validate the browser environment when called.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      stampInHtml(message, DEFAULT_STAMP_OPTIONS);\n\n      expect(Utils.validateBrowserEnvironment).toHaveBeenCalledExactlyOnceWith();\n    });\n\n    it(\"should call the comment mode when the mode is comment.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const options: StampOptions = { ...DEFAULT_STAMP_OPTIONS, mode: \"comment\" };\n      stampInHtml(message, options);\n\n      expect(CommentMode.stampCommentInHtml).toHaveBeenCalledExactlyOnceWith(message, options);\n    });\n\n    it(\"should call the meta tag mode when the mode is meta-tag.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const options: StampOptions = { ...DEFAULT_STAMP_OPTIONS, mode: \"meta-tag\" };\n      vi.spyOn(Utils, \"getStampOptions\").mockReturnValue(options);\n      stampInHtml(message, options);\n\n      expect(MetaTagMode.stampMetaTagInHtml).toHaveBeenCalledExactlyOnceWith(message, options);\n    });\n\n    it(\"should log an error when one of the stamp methods throws an error.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const options: StampOptions = { ...DEFAULT_STAMP_OPTIONS, mode: \"comment\" };\n      const errorMessage = \"Test error\";\n      vi.spyOn(CommentMode, \"stampCommentInHtml\").mockImplementation(() => {\n        throw new Error(errorMessage);\n      });\n      const consoleErrorSpy = vi.spyOn(console, \"error\").mockImplementation(vi.fn());\n      stampInHtml(message, options);\n\n      expect(consoleErrorSpy).toHaveBeenCalledWith(new Error(errorMessage));\n    });\n  });\n});"
     },
     "src/utils/utils.spec.ts": {
       "tests": [
         {
+          "id": "4",
+          "name": "Dev Stamp Utils validateBrowserEnvironment should throw an error when not in a browser environment because window is undefined."
+        },
+        {
           "id": "5",
-          "name": "Dev Stamp Utils getStampOptions should return default options when no options are provided."
+          "name": "Dev Stamp Utils validateBrowserEnvironment should throw an error when not in a browser environment because document is undefined."
         },
         {
           "id": "6",
+          "name": "Dev Stamp Utils validateBrowserEnvironment should not throw an error when in a browser environment."
+        },
+        {
+          "id": "7",
+          "name": "Dev Stamp Utils getTargetElement should throw an error when the target element is not found."
+        },
+        {
+          "id": "8",
+          "name": "Dev Stamp Utils getTargetElement should return the target element when it is found."
+        },
+        {
+          "id": "9",
+          "name": "Dev Stamp Utils getStampOptions should return default options when no options are provided."
+        },
+        {
+          "id": "10",
           "name": "Dev Stamp Utils getStampOptions should override default options with provided options when called."
         }
       ],
-      "source": "import { describe } from \"vitest\";\n\nimport { DEFAULT_STAMP_OPTIONS } from \"@/index.constants\";\nimport { getStampOptions } from \"@/utils/utils\";\n\ndescribe(\"Dev Stamp Utils\", () => {\n  describe(getStampOptions, () => {\n    it(\"should return default options when no options are provided.\", () => {\n      const result = getStampOptions({});\n\n      expect(result).toStrictEqual(DEFAULT_STAMP_OPTIONS);\n    });\n\n    it(\"should override default options with provided options when called.\", () => {\n      const customOptions = { targetSelector: \"#custom\" };\n      const result = getStampOptions(customOptions);\n\n      expect(result).toStrictEqual({ ...DEFAULT_STAMP_OPTIONS, ...customOptions });\n    });\n  });\n});"
+      "source": "import { describe } from \"vitest\";\n\nimport type { PartialStampOptions, StampOptions } from \"@/index.types\";\nimport { DEFAULT_STAMP_OPTIONS } from \"@/index.constants\";\nimport { getStampOptions, getTargetElement, validateBrowserEnvironment } from \"@/utils/utils\";\n\ndescribe(\"Dev Stamp Utils\", () => {\n  describe(validateBrowserEnvironment, () => {\n    it(\"should throw an error when not in a browser environment because window is undefined.\", () => {\n      globalThis.window = undefined as unknown as typeof globalThis.window;\n\n      expect(() => validateBrowserEnvironment()).toThrow(\"This function can only be run in a browser environment.\");\n    });\n\n    it(\"should throw an error when not in a browser environment because document is undefined.\", () => {\n      globalThis.window = {} as unknown as typeof globalThis.window;\n\n      expect(() => validateBrowserEnvironment()).toThrow(\"This function can only be run in a browser environment.\");\n    });\n\n    it(\"should not throw an error when in a browser environment.\", () => {\n      globalThis.window = window as unknown as typeof globalThis.window;\n\n      expect(() => validateBrowserEnvironment()).not.toThrow();\n    });\n  });\n\n  describe(getTargetElement, () => {\n    it(\"should throw an error when the target element is not found.\", () => {\n      const targetSelector = \"#nonexistent\";\n\n      expect(() => getTargetElement(targetSelector)).toThrow(`Target element not found: ${targetSelector}`);\n    });\n\n    it(\"should return the target element when it is found.\", () => {\n      const targetSelector = \"h1\";\n      const targetElement = getTargetElement(targetSelector);\n\n      expect(targetElement.nodeName).toBe(\"H1\");\n    });\n  });\n\n  describe(getStampOptions, () => {\n    it(\"should return default options when no options are provided.\", () => {\n      const result = getStampOptions({});\n\n      expect(result).toStrictEqual<StampOptions>(DEFAULT_STAMP_OPTIONS);\n    });\n\n    it(\"should override default options with provided options when called.\", () => {\n      const customOptions: PartialStampOptions = {\n        targetSelector: \"#custom\",\n        metaTag: {},\n      };\n      const result = getStampOptions(customOptions);\n      const expectedOptions: StampOptions = {\n        ...DEFAULT_STAMP_OPTIONS,\n        ...customOptions,\n        metaTag: {\n          ...DEFAULT_STAMP_OPTIONS.metaTag,\n          ...customOptions.metaTag,\n        },\n      };\n\n      expect(result).toStrictEqual<StampOptions>(expectedOptions);\n    });\n  });\n});"
+    },
+    "src/modes/meta-tag/meta-tag.spec.ts": {
+      "tests": [
+        {
+          "id": "11",
+          "name": "Meta Tag Mode stampOnExistingMetaTag should set the content attribute of the existing meta tag to the message when overwrite is true."
+        },
+        {
+          "id": "12",
+          "name": "Meta Tag Mode stampOnExistingMetaTag should log an error when overwrite is false."
+        },
+        {
+          "id": "13",
+          "name": "Meta Tag Mode stampMetaTagInHtml should create a new meta tag with the message when there is no existing meta tag."
+        },
+        {
+          "id": "14",
+          "name": "Meta Tag Mode stampMetaTagInHtml should call stampOnExistingMetaTag when there is an existing meta tag."
+        }
+      ],
+      "source": "import { DEFAULT_STAMP_OPTIONS } from \"@/index.constants\";\nimport { stampMetaTagInHtml, stampOnExistingMetaTag } from \"@/modes/meta-tag/meta-tag\";\n\ndescribe(\"Meta Tag Mode\", () => {\n  describe(stampOnExistingMetaTag, () => {\n    it(\"should set the content attribute of the existing meta tag to the message when overwrite is true.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const existingMetaTag = document.createElement(\"meta\");\n      const options = { name: \"description\", overwrite: true };\n      const setAttributeSpy = vi.spyOn(existingMetaTag, \"setAttribute\");\n      stampOnExistingMetaTag(message, existingMetaTag, options);\n\n      expect(setAttributeSpy).toHaveBeenCalledExactlyOnceWith(\"content\", message);\n    });\n\n    it(\"should log an error when overwrite is false.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const existingMetaTag = document.createElement(\"meta\");\n      const options = { name: \"description\", overwrite: false };\n      const consoleErrorSpy = vi.spyOn(console, \"error\").mockImplementation(vi.fn());\n      stampOnExistingMetaTag(message, existingMetaTag, options);\n\n      expect(consoleErrorSpy).toHaveBeenCalledExactlyOnceWith(`Meta tag with name \"${options.name}\" already exists. Use \"overwrite\" option to replace it.`);\n    });\n  });\n\n  describe(stampMetaTagInHtml, () => {\n    it(\"should create a new meta tag with the message when there is no existing meta tag.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const { head } = window.document;\n      const appendChildSpy = vi.spyOn(head, \"appendChild\");\n      const appendedMetaTag = window.document.createElement(\"meta\");\n      appendedMetaTag.setAttribute(\"name\", DEFAULT_STAMP_OPTIONS.metaTag.name);\n      appendedMetaTag.setAttribute(\"content\", message);\n      stampMetaTagInHtml(message, DEFAULT_STAMP_OPTIONS);\n\n      expect(appendChildSpy).toHaveBeenCalledExactlyOnceWith(appendedMetaTag);\n    });\n\n    it(\"should call stampOnExistingMetaTag when there is an existing meta tag.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const { head } = window.document;\n      const existingMetaTag = window.document.createElement(\"meta\");\n      existingMetaTag.setAttribute(\"name\", DEFAULT_STAMP_OPTIONS.metaTag.name);\n      head.appendChild(existingMetaTag);\n      stampMetaTagInHtml(message, DEFAULT_STAMP_OPTIONS);\n\n      expect(existingMetaTag.getAttribute(\"content\")).toBe(message);\n    });\n  });\n});"
+    },
+    "src/modes/comment/comment.spec.ts": {
+      "tests": [
+        {
+          "id": "15",
+          "name": "Comment Mode stampCommentInHtml should get the target element when called."
+        },
+        {
+          "id": "16",
+          "name": "Comment Mode stampCommentInHtml should create comment node with the message when called."
+        }
+      ],
+      "source": "import { DEFAULT_STAMP_OPTIONS } from \"@/index.constants\";\nimport * as Utils from \"@/utils/utils\";\nimport { stampCommentInHtml } from \"@/modes/comment/comment\";\n\ndescribe(\"Comment Mode\", () => {\n  beforeEach(() => {\n    vi.spyOn(Utils, \"getTargetElement\").mockImplementation(() => document.createElement(\"body\"));\n  });\n\n  describe(stampCommentInHtml, () => {\n    it(\"should get the target element when called.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      stampCommentInHtml(message, DEFAULT_STAMP_OPTIONS);\n\n      expect(Utils.getTargetElement).toHaveBeenCalledWith(DEFAULT_STAMP_OPTIONS.targetSelector);\n    });\n\n    it(\"should create comment node with the message when called.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const targetElement = window.document.querySelector(\"body\");\n      const commentNode = window.document.createComment(message);\n      const appendChildSpy = vi.spyOn(targetElement as Element, \"appendChild\");\n      vi.spyOn(Utils, \"getTargetElement\").mockReturnValue(targetElement as Element);\n      stampCommentInHtml(message, DEFAULT_STAMP_OPTIONS);\n\n      expect(appendChildSpy).toHaveBeenCalledWith(commentNode);\n    });\n  });\n});"
     }
   },
-  "projectRoot": "/Users/antoinezanardi/WebstormProjects/dev-stamp",
+  "projectRoot": "/Users/mac-Z14AZANA/WebstormProjects/dev-stamp",
   "config": {
     "cleanTempDir": "always",
     "incremental": true,

@@ -9,7 +9,8 @@ import { ESLINT_TYPESCRIPT_DECLARATION_CONFIG } from "./config/eslint/flat-confi
 import { ESLINT_STYLISTIC_CONFIG } from "./config/eslint/flat-configs/eslint.stylistic-config";
 import { ESLINT_CONFIG_FILES_CONFIG } from "./config/eslint/flat-configs/eslint.config-files-config";
 import { ESLINT_CLASSES_CONFIG } from "./config/eslint/flat-configs/eslint.classes-config";
-import { ESLINT_TESTS_CONFIG } from "./config/eslint/flat-configs/eslint.tests-config";
+import { ESLINT_UNIT_TESTS_CONFIG } from "./config/eslint/flat-configs/eslint.unit-tests-config";
+import { ESLINT_UNIT_TESTS_SETUP_CONFIG } from "./config/eslint/flat-configs/eslint.unit-tests-setup-config";
 
 export default [
   {
@@ -24,5 +25,6 @@ export default [
   ESLINT_STYLISTIC_CONFIG,
   ESLINT_CONFIG_FILES_CONFIG,
   ESLINT_CLASSES_CONFIG,
-  ESLINT_TESTS_CONFIG,
+  ESLINT_UNIT_TESTS_CONFIG,
+  ESLINT_UNIT_TESTS_SETUP_CONFIG,
 ] satisfies Linter.Config[];

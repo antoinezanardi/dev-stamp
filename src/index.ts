@@ -1,23 +1,22 @@
-import type { StampOptions } from "@/index.types";
+import type { StampMode, StampOptions } from "@/index.types";
 import { DEFAULT_STAMP_OPTIONS } from "@/index.constants";
 import { stampCommentInHtml } from "@/modes/comment/comment";
-import { getStampOptions } from "@/utils/utils";
+import { stampMetaTagInHtml } from "@/modes/meta-tag/meta-tag";
+import { getStampOptions, validateBrowserEnvironment } from "@/utils/utils";
 
 function stampInHtml(message: string, options: Partial<StampOptions> = DEFAULT_STAMP_OPTIONS): void {
-  if (typeof window === "undefined" || typeof window.document === "undefined") {
-    console.error("This function can only be run in a browser environment.");
-
-    return;
-  }
   const mergedOptions = getStampOptions(options);
-  const { targetSelector } = mergedOptions;
-  const targetElement = window.document.querySelector(targetSelector);
-  if (!targetElement) {
-    console.error(`Target element not found: ${targetSelector}`);
+  const stampMethods: Record<StampMode, () => void> = {
+    "comment": () => stampCommentInHtml(message, mergedOptions),
+    "meta-tag": () => stampMetaTagInHtml(message, mergedOptions),
+  };
 
-    return;
+  try {
+    validateBrowserEnvironment();
+    stampMethods[mergedOptions.mode]();
+  } catch (error) {
+    console.error(error);
   }
-  stampCommentInHtml(message, targetElement);
 }
 
 export {
