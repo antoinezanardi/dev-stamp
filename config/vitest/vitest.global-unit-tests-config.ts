@@ -37,6 +37,7 @@ export default defineConfig({
     clearMocks: true,
     mockReset: true,
     restoreMocks: true,
+    setupFiles: ["./tests/unit/setup.ts"],
   },
   plugins: [tsconfigPaths()],
 });
