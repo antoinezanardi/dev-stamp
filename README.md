@@ -180,10 +180,11 @@ You can choose the mode by setting the `mode` option in the `StampOptions` descr
 
 #### Meta Tag Options
 
-|    Field    |   Type    |                         Description                          |    Default    |
-|:-----------:|:---------:|:------------------------------------------------------------:|:-------------:|
-|   `name`    | `string`  |             Name of the meta tag to be injected              | `"dev-stamp"` |
-| `overwrite` | `boolean` | Whether to overwrite an existing meta tag with the same name |    `true`     |
+|       Field        |   Type    |                         Description                          |    Default    |
+|:------------------:|:---------:|:------------------------------------------------------------:|:-------------:|
+|       `name`       | `string`  |             Name of the meta tag to be injected              | `"dev-stamp"` |
+| `strictValidation` | `boolean` | Whether to validate the meta tag name against HTML standards |    `true`     |
+|    `overwrite`     | `boolean` | Whether to overwrite an existing meta tag with the same name |    `true`     |
 
 ---
 
