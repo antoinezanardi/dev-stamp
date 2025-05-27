@@ -1,8 +1,8 @@
 import { describe } from "vitest";
 
-import type { PartialStampOptions, StampOptions } from "@/index.types";
+import type { PartialStampOptions, StampCommentOptions, StampMetaTagOptions, StampOptions } from "@/index.types";
 import { DEFAULT_STAMP_OPTIONS } from "@/index.constants";
-import { getStampOptions, getTargetElement, validateBrowserEnvironment } from "@/utils/utils";
+import { getStampCommentOptions, getStampMetaTagOptions, getStampOptions, getTargetElement, validateBrowserEnvironment } from "@/utils/utils";
 
 describe("Dev Stamp Utils", () => {
   describe(validateBrowserEnvironment, () => {
@@ -40,6 +40,52 @@ describe("Dev Stamp Utils", () => {
     });
   });
 
+  describe(getStampMetaTagOptions, () => {
+    it("should return default meta tag options when no options are provided.", () => {
+      const result = getStampMetaTagOptions({});
+
+      expect(result).toStrictEqual(DEFAULT_STAMP_OPTIONS.metaTag);
+    });
+
+    it("should override default meta tag options with provided options when called.", () => {
+      const customOptions: PartialStampOptions = {
+        metaTag: {
+          name: "custom-name",
+        },
+      };
+      const result = getStampMetaTagOptions(customOptions);
+      const expectedOptions: StampMetaTagOptions = {
+        ...DEFAULT_STAMP_OPTIONS.metaTag,
+        ...customOptions.metaTag,
+      };
+
+      expect(result).toStrictEqual<StampMetaTagOptions>(expectedOptions);
+    });
+  });
+
+  describe(getStampCommentOptions, () => {
+    it("should return default comment options when no options are provided.", () => {
+      const result = getStampCommentOptions({});
+
+      expect(result).toStrictEqual(DEFAULT_STAMP_OPTIONS.comment);
+    });
+
+    it("should override default comment options with provided options when called.", () => {
+      const customOptions: PartialStampOptions = {
+        comment: {
+          innerDisplay: "block",
+        },
+      };
+      const result = getStampCommentOptions(customOptions);
+      const expectedOptions: StampCommentOptions = {
+        ...DEFAULT_STAMP_OPTIONS.comment,
+        ...customOptions.comment,
+      };
+
+      expect(result).toStrictEqual<StampCommentOptions>(expectedOptions);
+    });
+  });
+
   describe(getStampOptions, () => {
     it("should return default options when no options are provided.", () => {
       const result = getStampOptions({});
@@ -56,6 +102,7 @@ describe("Dev Stamp Utils", () => {
       const expectedOptions: StampOptions = {
         ...DEFAULT_STAMP_OPTIONS,
         ...customOptions,
+        comment: DEFAULT_STAMP_OPTIONS.comment,
         metaTag: {
           ...DEFAULT_STAMP_OPTIONS.metaTag,
           ...customOptions.metaTag,
