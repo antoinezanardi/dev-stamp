@@ -23,7 +23,7 @@
 - [💮 What is Dev Stamp?](#-what-is-dev-stamp)
 - [🎯 Use Cases](#-use-cases)
 - [🔥 Why You'll Love It](#-why-youll-love-it)
-- [🚀 Quick Example](#-quick-example)
+- [🚀 Quick Examples](#-quick-examples)
 - [📦 Installation](#-installation)
 - [🔧 Advanced Usage](#-advanced-usage)
 - [🧪 Robustness](#-robustness)
@@ -80,7 +80,7 @@ stampInHtml("💮 Made with love by [Your Name]");
   </head>
   <body>
     <h1>Hello, World!</h1>
-    <!-- 💮 Made with love by [Your Name] -->
+    <!--💮 Made with love by [Your Name]-->
   </body>
 </html>
 ```
@@ -164,12 +164,19 @@ You can choose the mode by setting the `mode` option in the `StampOptions` descr
 
 ### 🦋 Options
 
-|      Field       |                    Type                    |                                             Description                                              |                          Default                           |
-|:----------------:|:------------------------------------------:|:----------------------------------------------------------------------------------------------------:|:----------------------------------------------------------:|
-| `targetSelector` |                  `string`                  | CSS selector to find the target element to inject the stamp. Only used if `mode` is set to `comment` |                          `"body"`                          |
-|      `mode`      |        `"comment"`<br/>`"meta-tag"`        |                                        Mode of HTML injection                                        |                        `"comment"`                         |
-|    `metaTag`     |  [StampMetaTagOptions](#meta-tag-options)  |        Options related to the `meta-tag` injection. Only used if `mode` is set to `meta-tag`         | Refer to [Meta Tag Options](#meta-tag-options) for details |
+|      Field       |                   Type                   |                                             Description                                              |                          Default                           |
+|:----------------:|:----------------------------------------:|:----------------------------------------------------------------------------------------------------:|:----------------------------------------------------------:|
+| `targetSelector` |                 `string`                 | CSS selector to find the target element to inject the stamp. Only used if `mode` is set to `comment` |                          `"body"`                          |
+|      `mode`      |       `"comment"`<br/>`"meta-tag"`       |                                        Mode of HTML injection                                        |                        `"comment"`                         |
+|    `comment`     | [StampCommentOptions](#comment-options)  |         Options related to the `comment` injection. Only used if `mode` is set to `comment`          |  Refer to [Comment Options](#comment-options) for details  |
+|    `metaTag`     | [StampMetaTagOptions](#meta-tag-options) |        Options related to the `meta-tag` injection. Only used if `mode` is set to `meta-tag`         | Refer to [Meta Tag Options](#meta-tag-options) for details |
 
+
+#### Comment Options
+
+|     Field      |                      Type                      |                                                                                                 Description                                                                                                  |  Default   |
+|:--------------:|:----------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------:|
+| `innerDisplay` | `"inline"`<br/>`"spaced-inline"`<br/>`"block"` | How the comment should be displayed in the HTML. `"inline"` is the default, `"spaced-inline"` adds spaces around the comment, and `"block"` displays it as a block comment (with newlines before and after). | `"inline"` |
 
 #### Meta Tag Options
 

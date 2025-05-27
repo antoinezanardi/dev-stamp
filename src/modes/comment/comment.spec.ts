@@ -1,12 +1,39 @@
 import { Node } from "happy-dom";
 
+import type { StampCommentOptions } from "@/index.types";
 import { DEFAULT_STAMP_OPTIONS } from "@/index.constants";
 import * as Utils from "@/utils/utils";
-import { stampCommentInHtml } from "@/modes/comment/comment";
+import { stampCommentInHtml, getFormattedComment } from "@/modes/comment/comment";
 
 describe("Comment Mode", () => {
   beforeEach(() => {
     vi.spyOn(Utils, "getTargetElement").mockReturnValue(document.createElement("body"));
+  });
+
+  describe(getFormattedComment, () => {
+    it("should return the message as is when innerDisplay is 'inline'.", () => {
+      const message = "Hello Dark Jess' 🪄";
+      const options: StampCommentOptions = { innerDisplay: "inline" };
+      const formattedMessage = getFormattedComment(message, options);
+
+      expect(formattedMessage).toBe(message);
+    });
+
+    it("should return the message with leading and trailing spaces when innerDisplay is 'spaced-inline'.", () => {
+      const message = "Hello Dark Jess' 🪄";
+      const options: StampCommentOptions = { innerDisplay: "spaced-inline" };
+      const formattedMessage = getFormattedComment(message, options);
+
+      expect(formattedMessage).toBe(` ${message} `);
+    });
+
+    it("should return the message with leading and trailing newlines when innerDisplay is 'block'.", () => {
+      const message = "Hello Dark Jess' 🪄";
+      const options: StampCommentOptions = { innerDisplay: "block" };
+      const formattedMessage = getFormattedComment(message, options);
+
+      expect(formattedMessage).toBe(`\n${message}\n`);
+    });
   });
 
   describe(stampCommentInHtml, () => {

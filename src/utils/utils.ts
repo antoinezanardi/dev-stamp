@@ -1,5 +1,5 @@
 import { DEFAULT_STAMP_OPTIONS } from "@/index.constants";
-import type { PartialStampOptions, StampOptions } from "@/index.types";
+import type { PartialStampOptions, StampCommentOptions, StampMetaTagOptions, StampOptions } from "@/index.types";
 
 function validateBrowserEnvironment(): void {
   if (typeof window === "undefined" || typeof window.document === "undefined") {
@@ -15,19 +15,33 @@ function getTargetElement(targetSelector: string): Element {
   return targetElement;
 }
 
+function getStampMetaTagOptions(options: PartialStampOptions): StampMetaTagOptions {
+  return {
+    ...DEFAULT_STAMP_OPTIONS.metaTag,
+    ...options.metaTag,
+  };
+}
+
+function getStampCommentOptions(options: PartialStampOptions): StampCommentOptions {
+  return {
+    ...DEFAULT_STAMP_OPTIONS.comment,
+    ...options.comment,
+  };
+}
+
 function getStampOptions(options: PartialStampOptions): StampOptions {
   return {
     ...DEFAULT_STAMP_OPTIONS,
     ...options,
-    metaTag: {
-      ...DEFAULT_STAMP_OPTIONS.metaTag,
-      ...options.metaTag,
-    },
+    comment: getStampCommentOptions(options),
+    metaTag: getStampMetaTagOptions(options),
   };
 }
 
 export {
   validateBrowserEnvironment,
   getTargetElement,
+  getStampMetaTagOptions,
+  getStampCommentOptions,
   getStampOptions,
 };
