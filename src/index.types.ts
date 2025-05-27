@@ -8,6 +8,7 @@ type StampCommentOptions = {
 
 type StampMetaTagOptions = {
   name: string;
+  strictValidation: boolean;
   overwrite: boolean;
 };
 

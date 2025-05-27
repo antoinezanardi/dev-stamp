@@ -6,6 +6,7 @@ const DEFAULT_COMMENT_OPTIONS: StampCommentOptions = {
 
 const DEFAULT_META_TAG_OPTIONS: StampMetaTagOptions = {
   name: "dev-stamp",
+  strictValidation: true,
   overwrite: true,
 } as const;
 
