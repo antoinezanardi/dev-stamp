@@ -3,7 +3,7 @@ import type { StampMetaTagOptions, StampOptions } from "@/index.types";
 function stampOnExistingMetaTag(message: string, existingMetaTag: Element, options: StampMetaTagOptions): void {
   const { overwrite: doesOverride } = options;
   if (!doesOverride) {
-    throw new Error(`Meta tag with name "${options.name}" already exists. Use "meta.overwrite" option to replace it.`);
+    throw new Error(`Meta tag with name "${options.name}" already exists. Use "metaTag.overwrite" option to replace it.`);
   }
   existingMetaTag.setAttribute("content", message);
 }
@@ -13,10 +13,11 @@ function validateMetaTagOptions(name: string, options: StampMetaTagOptions): voi
     return;
   }
   if (!name) {
-    throw new Error("Meta tag name cannot be empty. Set 'meta.strictValidation' to false to skip this check.");
+    throw new Error("Meta tag name cannot be empty. Set 'metaTag.strictValidation' to false to skip this check.");
   }
-  if (!(/^[a-zA-Z0-9_\-:.]+$/u).test(name)) {
-    throw new Error(`Invalid meta tag name: "${name}". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'meta.strictValidation' to false to skip this check.`);
+  const validNamePattern = /^[a-zA-Z0-9_\-:.]+$/u;
+  if (!validNamePattern.test(name)) {
+    throw new Error(`Invalid meta tag name: "${name}". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'metaTag.strictValidation' to false to skip this check.`);
   }
 }
 

@@ -27,7 +27,7 @@ describe("Meta Tag Mode", () => {
         strictValidation: true,
         overwrite: false,
       };
-      const expectedError = `Meta tag with name "${options.name}" already exists. Use "meta.overwrite" option to replace it.`;
+      const expectedError = `Meta tag with name "${options.name}" already exists. Use "metaTag.overwrite" option to replace it.`;
 
       expect(() => stampOnExistingMetaTag(message, existingMetaTag, options)).toThrow(expectedError);
     });
@@ -50,7 +50,7 @@ describe("Meta Tag Mode", () => {
         strictValidation: true,
         overwrite: true,
       };
-      const expectedError = "Meta tag name cannot be empty. Set 'meta.strictValidation' to false to skip this check.";
+      const expectedError = "Meta tag name cannot be empty. Set 'metaTag.strictValidation' to false to skip this check.";
 
       expect(() => validateMetaTagOptions(options.name, options)).toThrow(expectedError);
     });
@@ -61,7 +61,7 @@ describe("Meta Tag Mode", () => {
         strictValidation: true,
         overwrite: true,
       };
-      const expectedError = `Invalid meta tag name: "invalid@name". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'meta.strictValidation' to false to skip this check.`;
+      const expectedError = `Invalid meta tag name: "invalid@name". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'metaTag.strictValidation' to false to skip this check.`;
 
       expect(() => validateMetaTagOptions(options.name, options)).toThrow(expectedError);
     });
