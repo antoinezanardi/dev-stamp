@@ -1,5 +1,25 @@
 # 💮 Dev Stamp Changelog
 
+## [1.2.0](https://github.com/antoinezanardi/dev-stamp/compare/v1.1.0...v1.2.0) (2025-05-28)
+
+### 🚀 Features
+
+* **comment:** add comment options and formatting functionality ([#43](https://github.com/antoinezanardi/dev-stamp/issues/43)) ([0cdd0e5](https://github.com/antoinezanardi/dev-stamp/commit/0cdd0e57527ac4c5b0666ee90ec4f93d9a02f1c0))
+* **meta-tag:** add strict validation for meta tag options and update related functionality ([#44](https://github.com/antoinezanardi/dev-stamp/issues/44)) ([d46d05e](https://github.com/antoinezanardi/dev-stamp/commit/d46d05ea99844ed4551fe0e3f1addd6af55644d1))
+* **stamp:** add meta tag injection mode ([#36](https://github.com/antoinezanardi/dev-stamp/issues/36)) ([af8fdc6](https://github.com/antoinezanardi/dev-stamp/commit/af8fdc6d15d16ea0b8c35e4d7867beb5b2561d08))
+
+### 🧹 Chore
+
+* **deps:** update dependency @stylistic/eslint-plugin to ^4.4.0 ([#40](https://github.com/antoinezanardi/dev-stamp/issues/40)) ([9c39394](https://github.com/antoinezanardi/dev-stamp/commit/9c3939459cb03790561307dcf1ba931cc6a0aeff))
+* **deps:** update dependency @types/node to ^22.15.23 ([#47](https://github.com/antoinezanardi/dev-stamp/issues/47)) ([bf6cb87](https://github.com/antoinezanardi/dev-stamp/commit/bf6cb8735b185663ea39aa08ceab033580acaac6))
+* **deps:** update dependency @vitest/eslint-plugin to ^1.2.1 ([#38](https://github.com/antoinezanardi/dev-stamp/issues/38)) ([2259ade](https://github.com/antoinezanardi/dev-stamp/commit/2259ade8cfaaa07b2572b76ade679266f74adac1))
+* **deps:** update dependency eslint-import-resolver-typescript to ^4.4.0 ([#41](https://github.com/antoinezanardi/dev-stamp/issues/41)) ([4164763](https://github.com/antoinezanardi/dev-stamp/commit/4164763284a28d27277a0ff4902d4ab9929e8191))
+* **deps:** update dependency eslint-import-resolver-typescript to ^4.4.1 ([#42](https://github.com/antoinezanardi/dev-stamp/issues/42)) ([ebb997b](https://github.com/antoinezanardi/dev-stamp/commit/ebb997b21fd8f8a20ecf13a41ec84fecd5edebcb))
+* **deps:** update dependency happy-dom to ^17.5.6 ([#45](https://github.com/antoinezanardi/dev-stamp/issues/45)) ([6be308d](https://github.com/antoinezanardi/dev-stamp/commit/6be308d8a1c74a2d043721ae204407f89b2f8664))
+* **deps:** update dependency lint-staged to ^16.1.0 ([#48](https://github.com/antoinezanardi/dev-stamp/issues/48)) ([b5a7ef0](https://github.com/antoinezanardi/dev-stamp/commit/b5a7ef0840a49cf150bccfa7e9a80b4684d8491b))
+* **deps:** update dependency semantic-release to ^24.2.5 ([#39](https://github.com/antoinezanardi/dev-stamp/issues/39)) ([9bb8c66](https://github.com/antoinezanardi/dev-stamp/commit/9bb8c66dd00a3df4d29171bb03bb4593da20322e))
+* **deps:** update typescript-eslint monorepo to ^8.33.0 ([#46](https://github.com/antoinezanardi/dev-stamp/issues/46)) ([049ec01](https://github.com/antoinezanardi/dev-stamp/commit/049ec016a2e145405fdb96f39c9e1a0c1ede6692))
+
 ## [1.1.0](https://github.com/antoinezanardi/dev-stamp/compare/v1.0.2...v1.1.0) (2025-05-23)
 
 ### 🚀 Features
