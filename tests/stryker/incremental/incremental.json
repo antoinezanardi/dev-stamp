@@ -1167,33 +1167,6 @@
       "language": "typescript",
       "mutants": [
         {
-          "id": "21",
-          "mutatorName": "BooleanLiteral",
-          "replacement": "doesOverride",
-          "statusReason": "Meta tag with name \"description\" already exists. Use \"meta.overwrite\" option to replace it.",
-          "status": "Killed",
-          "static": false,
-          "testsCompleted": 1,
-          "killedBy": [
-            "0"
-          ],
-          "coveredBy": [
-            "0",
-            "1",
-            "10"
-          ],
-          "location": {
-            "end": {
-              "column": 20,
-              "line": 5
-            },
-            "start": {
-              "column": 7,
-              "line": 5
-            }
-          }
-        },
-        {
           "id": "20",
           "mutatorName": "BlockStatement",
           "replacement": "{}",
@@ -1217,6 +1190,33 @@
             "start": {
               "column": 112,
               "line": 3
+            }
+          }
+        },
+        {
+          "id": "22",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "statusReason": "Meta tag with name \"description\" already exists. Use \"metaTag.overwrite\" option to replace it.",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "0"
+          ],
+          "coveredBy": [
+            "0",
+            "1",
+            "10"
+          ],
+          "location": {
+            "end": {
+              "column": 20,
+              "line": 5
+            },
+            "start": {
+              "column": 7,
+              "line": 5
             }
           }
         },
@@ -1248,10 +1248,10 @@
           }
         },
         {
-          "id": "22",
-          "mutatorName": "ConditionalExpression",
-          "replacement": "true",
-          "statusReason": "Meta tag with name \"description\" already exists. Use \"meta.overwrite\" option to replace it.",
+          "id": "21",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "doesOverride",
+          "statusReason": "Meta tag with name \"description\" already exists. Use \"metaTag.overwrite\" option to replace it.",
           "status": "Killed",
           "static": false,
           "testsCompleted": 1,
@@ -1271,31 +1271,6 @@
             "start": {
               "column": 7,
               "line": 5
-            }
-          }
-        },
-        {
-          "id": "25",
-          "mutatorName": "StringLiteral",
-          "replacement": "``",
-          "statusReason": "expected [Function] to throw error including 'Meta tag with name \"description\" alre…' but got ''",
-          "status": "Killed",
-          "static": false,
-          "testsCompleted": 1,
-          "killedBy": [
-            "1"
-          ],
-          "coveredBy": [
-            "1"
-          ],
-          "location": {
-            "end": {
-              "column": 118,
-              "line": 6
-            },
-            "start": {
-              "column": 21,
-              "line": 6
             }
           }
         },
@@ -1321,6 +1296,31 @@
             "start": {
               "column": 22,
               "line": 5
+            }
+          }
+        },
+        {
+          "id": "25",
+          "mutatorName": "StringLiteral",
+          "replacement": "``",
+          "statusReason": "expected [Function] to throw error including 'Meta tag with name \"description\" alre…' but got ''",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "1"
+          ],
+          "coveredBy": [
+            "1"
+          ],
+          "location": {
+            "end": {
+              "column": 121,
+              "line": 6
+            },
+            "start": {
+              "column": 21,
+              "line": 6
             }
           }
         },
@@ -1375,7 +1375,7 @@
           "location": {
             "end": {
               "column": 2,
-              "line": 21
+              "line": 22
             },
             "start": {
               "column": 83,
@@ -1572,31 +1572,6 @@
           }
         },
         {
-          "id": "35",
-          "mutatorName": "BlockStatement",
-          "replacement": "{}",
-          "statusReason": "expected [Function] to throw error including 'Meta tag name cannot be empty. Set \\'…' but got 'Invalid meta tag name: \"\". Only alpha…'",
-          "status": "Killed",
-          "static": false,
-          "testsCompleted": 1,
-          "killedBy": [
-            "3"
-          ],
-          "coveredBy": [
-            "3"
-          ],
-          "location": {
-            "end": {
-              "column": 4,
-              "line": 17
-            },
-            "start": {
-              "column": 14,
-              "line": 15
-            }
-          }
-        },
-        {
           "id": "34",
           "mutatorName": "ConditionalExpression",
           "replacement": "false",
@@ -1629,6 +1604,31 @@
           }
         },
         {
+          "id": "35",
+          "mutatorName": "BlockStatement",
+          "replacement": "{}",
+          "statusReason": "expected [Function] to throw error including 'Meta tag name cannot be empty. Set \\'…' but got 'Invalid meta tag name: \"\". Only alpha…'",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "3"
+          ],
+          "coveredBy": [
+            "3"
+          ],
+          "location": {
+            "end": {
+              "column": 4,
+              "line": 17
+            },
+            "start": {
+              "column": 14,
+              "line": 15
+            }
+          }
+        },
+        {
           "id": "36",
           "mutatorName": "StringLiteral",
           "replacement": "\"\"",
@@ -1644,7 +1644,7 @@
           ],
           "location": {
             "end": {
-              "column": 110,
+              "column": 113,
               "line": 16
             },
             "start": {
@@ -1655,99 +1655,6 @@
         },
         {
           "id": "37",
-          "mutatorName": "BooleanLiteral",
-          "replacement": "/^[a-zA-Z0-9_\\-:.]+$/u.test(name)",
-          "statusReason": "expected [Function] to throw an error",
-          "status": "Killed",
-          "static": false,
-          "testsCompleted": 1,
-          "killedBy": [
-            "4"
-          ],
-          "coveredBy": [
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"
-          ],
-          "location": {
-            "end": {
-              "column": 43,
-              "line": 18
-            },
-            "start": {
-              "column": 7,
-              "line": 18
-            }
-          }
-        },
-        {
-          "id": "39",
-          "mutatorName": "ConditionalExpression",
-          "replacement": "false",
-          "statusReason": "expected [Function] to throw an error",
-          "status": "Killed",
-          "static": false,
-          "testsCompleted": 1,
-          "killedBy": [
-            "4"
-          ],
-          "coveredBy": [
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"
-          ],
-          "location": {
-            "end": {
-              "column": 43,
-              "line": 18
-            },
-            "start": {
-              "column": 7,
-              "line": 18
-            }
-          }
-        },
-        {
-          "id": "38",
-          "mutatorName": "ConditionalExpression",
-          "replacement": "true",
-          "statusReason": "Invalid meta tag name: \"dev-stamp\". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'meta.strictValidation' to false to skip this check.",
-          "status": "Killed",
-          "static": false,
-          "testsCompleted": 2,
-          "killedBy": [
-            "5"
-          ],
-          "coveredBy": [
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"
-          ],
-          "location": {
-            "end": {
-              "column": 43,
-              "line": 18
-            },
-            "start": {
-              "column": 7,
-              "line": 18
-            }
-          }
-        },
-        {
-          "id": "40",
           "mutatorName": "Regex",
           "replacement": "/[a-zA-Z0-9_\\-:.]+$/u",
           "statusReason": "expected [Function] to throw an error",
@@ -1768,17 +1675,17 @@
           ],
           "location": {
             "end": {
-              "column": 31,
+              "column": 50,
               "line": 18
             },
             "start": {
-              "column": 9,
+              "column": 28,
               "line": 18
             }
           }
         },
         {
-          "id": "41",
+          "id": "38",
           "mutatorName": "Regex",
           "replacement": "/^[a-zA-Z0-9_\\-:.]+/u",
           "statusReason": "expected [Function] to throw an error",
@@ -1799,20 +1706,20 @@
           ],
           "location": {
             "end": {
-              "column": 31,
+              "column": 50,
               "line": 18
             },
             "start": {
-              "column": 9,
+              "column": 28,
               "line": 18
             }
           }
         },
         {
-          "id": "42",
+          "id": "39",
           "mutatorName": "Regex",
           "replacement": "/^[a-zA-Z0-9_\\-:.]$/u",
-          "statusReason": "Invalid meta tag name: \"dev-stamp\". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'meta.strictValidation' to false to skip this check.",
+          "statusReason": "Invalid meta tag name: \"dev-stamp\". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'metaTag.strictValidation' to false to skip this check.",
           "status": "Killed",
           "static": false,
           "testsCompleted": 2,
@@ -1830,20 +1737,113 @@
           ],
           "location": {
             "end": {
-              "column": 31,
+              "column": 50,
               "line": 18
             },
             "start": {
-              "column": 9,
+              "column": 28,
               "line": 18
+            }
+          }
+        },
+        {
+          "id": "40",
+          "mutatorName": "Regex",
+          "replacement": "/^[^a-zA-Z0-9_\\-:.]+$/u",
+          "statusReason": "Invalid meta tag name: \"dev-stamp\". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'metaTag.strictValidation' to false to skip this check.",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 2,
+          "killedBy": [
+            "5"
+          ],
+          "coveredBy": [
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "location": {
+            "end": {
+              "column": 50,
+              "line": 18
+            },
+            "start": {
+              "column": 28,
+              "line": 18
+            }
+          }
+        },
+        {
+          "id": "41",
+          "mutatorName": "BooleanLiteral",
+          "replacement": "validNamePattern.test(name)",
+          "statusReason": "expected [Function] to throw an error",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "4"
+          ],
+          "coveredBy": [
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "location": {
+            "end": {
+              "column": 35,
+              "line": 19
+            },
+            "start": {
+              "column": 7,
+              "line": 19
             }
           }
         },
         {
           "id": "43",
-          "mutatorName": "Regex",
-          "replacement": "/^[^a-zA-Z0-9_\\-:.]+$/u",
-          "statusReason": "Invalid meta tag name: \"dev-stamp\". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'meta.strictValidation' to false to skip this check.",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "statusReason": "expected [Function] to throw an error",
+          "status": "Killed",
+          "static": false,
+          "testsCompleted": 1,
+          "killedBy": [
+            "4"
+          ],
+          "coveredBy": [
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "location": {
+            "end": {
+              "column": 35,
+              "line": 19
+            },
+            "start": {
+              "column": 7,
+              "line": 19
+            }
+          }
+        },
+        {
+          "id": "42",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "true",
+          "statusReason": "Invalid meta tag name: \"dev-stamp\". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'metaTag.strictValidation' to false to skip this check.",
           "status": "Killed",
           "static": false,
           "testsCompleted": 2,
@@ -1861,12 +1861,12 @@
           ],
           "location": {
             "end": {
-              "column": 31,
-              "line": 18
+              "column": 35,
+              "line": 19
             },
             "start": {
-              "column": 9,
-              "line": 18
+              "column": 7,
+              "line": 19
             }
           }
         },
@@ -1887,11 +1887,11 @@
           "location": {
             "end": {
               "column": 4,
-              "line": 20
+              "line": 21
             },
             "start": {
-              "column": 45,
-              "line": 18
+              "column": 37,
+              "line": 19
             }
           }
         },
@@ -1911,12 +1911,12 @@
           ],
           "location": {
             "end": {
-              "column": 198,
-              "line": 19
+              "column": 201,
+              "line": 20
             },
             "start": {
               "column": 21,
-              "line": 19
+              "line": 20
             }
           }
         },
@@ -1942,11 +1942,11 @@
           "location": {
             "end": {
               "column": 2,
-              "line": 38
+              "line": 39
             },
             "start": {
               "column": 75,
-              "line": 23
+              "line": 24
             }
           }
         },
@@ -1954,7 +1954,7 @@
           "id": "47",
           "mutatorName": "MethodExpression",
           "replacement": "name",
-          "statusReason": "Invalid meta tag name: \"  custom-name  \". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'meta.strictValidation' to false to skip this check.",
+          "statusReason": "Invalid meta tag name: \"  custom-name  \". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'metaTag.strictValidation' to false to skip this check.",
           "status": "Killed",
           "static": false,
           "testsCompleted": 3,
@@ -1972,11 +1972,11 @@
           "location": {
             "end": {
               "column": 34,
-              "line": 26
+              "line": 27
             },
             "start": {
               "column": 23,
-              "line": 26
+              "line": 27
             }
           }
         },
@@ -1984,7 +1984,7 @@
           "id": "49",
           "mutatorName": "ConditionalExpression",
           "replacement": "true",
-          "statusReason": "src/modes/meta-tag/meta-tag.ts(30,37): error TS2345: Argument of type 'Element | null' is not assignable to parameter of type 'Element'.\n  Type 'null' is not assignable to type 'Element'.\n",
+          "statusReason": "src/modes/meta-tag/meta-tag.ts(31,37): error TS2345: Argument of type 'Element | null' is not assignable to parameter of type 'Element'.\n  Type 'null' is not assignable to type 'Element'.\n",
           "status": "CompileError",
           "static": false,
           "coveredBy": [
@@ -1998,37 +1998,11 @@
           "location": {
             "end": {
               "column": 22,
-              "line": 29
+              "line": 30
             },
             "start": {
               "column": 7,
-              "line": 29
-            }
-          }
-        },
-        {
-          "id": "50",
-          "mutatorName": "ConditionalExpression",
-          "replacement": "false",
-          "statusReason": "src/modes/meta-tag/meta-tag.ts(30,37): error TS2345: Argument of type 'Element | null' is not assignable to parameter of type 'Element'.\n  Type 'null' is not assignable to type 'Element'.\n",
-          "status": "CompileError",
-          "static": false,
-          "coveredBy": [
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"
-          ],
-          "location": {
-            "end": {
-              "column": 22,
-              "line": 29
-            },
-            "start": {
-              "column": 7,
-              "line": 29
+              "line": 30
             }
           }
         },
@@ -2054,11 +2028,37 @@
           "location": {
             "end": {
               "column": 75,
-              "line": 28
+              "line": 29
             },
             "start": {
               "column": 46,
-              "line": 28
+              "line": 29
+            }
+          }
+        },
+        {
+          "id": "50",
+          "mutatorName": "ConditionalExpression",
+          "replacement": "false",
+          "statusReason": "src/modes/meta-tag/meta-tag.ts(31,37): error TS2345: Argument of type 'Element | null' is not assignable to parameter of type 'Element'.\n  Type 'null' is not assignable to type 'Element'.\n",
+          "status": "CompileError",
+          "static": false,
+          "coveredBy": [
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"
+          ],
+          "location": {
+            "end": {
+              "column": 22,
+              "line": 30
+            },
+            "start": {
+              "column": 7,
+              "line": 30
             }
           }
         },
@@ -2079,11 +2079,11 @@
           "location": {
             "end": {
               "column": 4,
-              "line": 33
+              "line": 34
             },
             "start": {
               "column": 24,
-              "line": 29
+              "line": 30
             }
           }
         },
@@ -2108,11 +2108,11 @@
           "location": {
             "end": {
               "column": 55,
-              "line": 34
+              "line": 35
             },
             "start": {
               "column": 49,
-              "line": 34
+              "line": 35
             }
           }
         },
@@ -2137,11 +2137,11 @@
           "location": {
             "end": {
               "column": 30,
-              "line": 35
+              "line": 36
             },
             "start": {
               "column": 24,
-              "line": 35
+              "line": 36
             }
           }
         },
@@ -2166,16 +2166,16 @@
           "location": {
             "end": {
               "column": 33,
-              "line": 36
+              "line": 37
             },
             "start": {
               "column": 24,
-              "line": 36
+              "line": 37
             }
           }
         }
       ],
-      "source": "import type { StampMetaTagOptions, StampOptions } from \"@/index.types\";\n\nfunction stampOnExistingMetaTag(message: string, existingMetaTag: Element, options: StampMetaTagOptions): void {\n  const { overwrite: doesOverride } = options;\n  if (!doesOverride) {\n    throw new Error(`Meta tag with name \"${options.name}\" already exists. Use \"meta.overwrite\" option to replace it.`);\n  }\n  existingMetaTag.setAttribute(\"content\", message);\n}\n\nfunction validateMetaTagOptions(name: string, options: StampMetaTagOptions): void {\n  if (!options.strictValidation) {\n    return;\n  }\n  if (!name) {\n    throw new Error(\"Meta tag name cannot be empty. Set 'meta.strictValidation' to false to skip this check.\");\n  }\n  if (!(/^[a-zA-Z0-9_\\-:.]+$/u).test(name)) {\n    throw new Error(`Invalid meta tag name: \"${name}\". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'meta.strictValidation' to false to skip this check.`);\n  }\n}\n\nfunction stampMetaTagInHtml(message: string, options: StampOptions): void {\n  const { head } = window.document;\n  const { name } = options.metaTag;\n  const trimmedName = name.trim();\n  validateMetaTagOptions(trimmedName, options.metaTag);\n  const existingMetaTag = head.querySelector(`meta[name=\"${trimmedName}\"]`);\n  if (existingMetaTag) {\n    stampOnExistingMetaTag(message, existingMetaTag, options.metaTag);\n\n    return;\n  }\n  const metaTag = window.document.createElement(\"meta\");\n  metaTag.setAttribute(\"name\", trimmedName);\n  metaTag.setAttribute(\"content\", message);\n  head.appendChild(metaTag);\n}\n\nexport {\n  stampOnExistingMetaTag,\n  validateMetaTagOptions,\n  stampMetaTagInHtml,\n};"
+      "source": "import type { StampMetaTagOptions, StampOptions } from \"@/index.types\";\n\nfunction stampOnExistingMetaTag(message: string, existingMetaTag: Element, options: StampMetaTagOptions): void {\n  const { overwrite: doesOverride } = options;\n  if (!doesOverride) {\n    throw new Error(`Meta tag with name \"${options.name}\" already exists. Use \"metaTag.overwrite\" option to replace it.`);\n  }\n  existingMetaTag.setAttribute(\"content\", message);\n}\n\nfunction validateMetaTagOptions(name: string, options: StampMetaTagOptions): void {\n  if (!options.strictValidation) {\n    return;\n  }\n  if (!name) {\n    throw new Error(\"Meta tag name cannot be empty. Set 'metaTag.strictValidation' to false to skip this check.\");\n  }\n  const validNamePattern = /^[a-zA-Z0-9_\\-:.]+$/u;\n  if (!validNamePattern.test(name)) {\n    throw new Error(`Invalid meta tag name: \"${name}\". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'metaTag.strictValidation' to false to skip this check.`);\n  }\n}\n\nfunction stampMetaTagInHtml(message: string, options: StampOptions): void {\n  const { head } = window.document;\n  const { name } = options.metaTag;\n  const trimmedName = name.trim();\n  validateMetaTagOptions(trimmedName, options.metaTag);\n  const existingMetaTag = head.querySelector(`meta[name=\"${trimmedName}\"]`);\n  if (existingMetaTag) {\n    stampOnExistingMetaTag(message, existingMetaTag, options.metaTag);\n\n    return;\n  }\n  const metaTag = window.document.createElement(\"meta\");\n  metaTag.setAttribute(\"name\", trimmedName);\n  metaTag.setAttribute(\"content\", message);\n  head.appendChild(metaTag);\n}\n\nexport {\n  stampOnExistingMetaTag,\n  validateMetaTagOptions,\n  stampMetaTagInHtml,\n};"
     }
   },
   "schemaVersion": "1.0",
@@ -2232,7 +2232,7 @@
           "name": "Meta Tag Mode stampMetaTagInHtml should call stampOnExistingMetaTag when there is an existing meta tag."
         }
       ],
-      "source": "import { DEFAULT_STAMP_OPTIONS } from \"@/index.constants\";\nimport type { StampMetaTagOptions } from \"@/index.types\";\nimport { stampMetaTagInHtml, stampOnExistingMetaTag, validateMetaTagOptions } from \"@/modes/meta-tag/meta-tag\";\n\ndescribe(\"Meta Tag Mode\", () => {\n  describe(stampOnExistingMetaTag, () => {\n    it(\"should set the content attribute of the existing meta tag to the message when overwrite is true.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const existingMetaTag = document.createElement(\"meta\");\n      const options: StampMetaTagOptions = {\n        name: \"description\",\n        strictValidation: true,\n        overwrite: true,\n      };\n      const setAttributeSpy = vi.spyOn(existingMetaTag, \"setAttribute\");\n      stampOnExistingMetaTag(message, existingMetaTag, options);\n\n      expect(setAttributeSpy).toHaveBeenCalledExactlyOnceWith(\"content\", message);\n    });\n\n    it(\"should throw an error when overwrite is false and an existing meta tag is found.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const existingMetaTag = document.createElement(\"meta\");\n      existingMetaTag.setAttribute(\"name\", \"description\");\n      const options: StampMetaTagOptions = {\n        name: \"description\",\n        strictValidation: true,\n        overwrite: false,\n      };\n      const expectedError = `Meta tag with name \"${options.name}\" already exists. Use \"meta.overwrite\" option to replace it.`;\n\n      expect(() => stampOnExistingMetaTag(message, existingMetaTag, options)).toThrow(expectedError);\n    });\n  });\n\n  describe(validateMetaTagOptions, () => {\n    it(\"should not throw an error when strictValidation is false.\", () => {\n      const options: StampMetaTagOptions = {\n        name: \"invalid@name\",\n        strictValidation: false,\n        overwrite: true,\n      };\n\n      expect(() => validateMetaTagOptions(options.name, options)).not.toThrow();\n    });\n\n    it(\"should throw an error when name is empty and strictValidation is true.\", () => {\n      const options: StampMetaTagOptions = {\n        name: \"\",\n        strictValidation: true,\n        overwrite: true,\n      };\n      const expectedError = \"Meta tag name cannot be empty. Set 'meta.strictValidation' to false to skip this check.\";\n\n      expect(() => validateMetaTagOptions(options.name, options)).toThrow(expectedError);\n    });\n\n    it(\"should throw an error when name contains invalid characters and strictValidation is true.\", () => {\n      const options: StampMetaTagOptions = {\n        name: \"invalid@name\",\n        strictValidation: true,\n        overwrite: true,\n      };\n      const expectedError = `Invalid meta tag name: \"invalid@name\". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'meta.strictValidation' to false to skip this check.`;\n\n      expect(() => validateMetaTagOptions(options.name, options)).toThrow(expectedError);\n    });\n  });\n\n  describe(stampMetaTagInHtml, () => {\n    it(\"should create a new meta tag with the message when there is no existing meta tag.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const { head } = window.document;\n      const appendChildSpy = vi.spyOn(head, \"appendChild\");\n      const appendedMetaTag = window.document.createElement(\"meta\");\n      appendedMetaTag.setAttribute(\"name\", DEFAULT_STAMP_OPTIONS.metaTag.name);\n      appendedMetaTag.setAttribute(\"content\", message);\n      stampMetaTagInHtml(message, DEFAULT_STAMP_OPTIONS);\n\n      expect(appendChildSpy).toHaveBeenCalledExactlyOnceWith(appendedMetaTag);\n    });\n\n    it(\"should create a new meta tag when called.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const { head } = window.document;\n      const appendChildSpy = vi.spyOn(head, \"appendChild\");\n      stampMetaTagInHtml(message, DEFAULT_STAMP_OPTIONS);\n      const appendedElement = appendChildSpy.mock.calls[0][0] as HTMLMetaElement;\n\n      expect(appendedElement.tagName).toBe(\"META\");\n    });\n\n    it(\"should trim the name of the meta tag when set in options.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const { head } = window.document;\n      const appendChildSpy = vi.spyOn(head, \"appendChild\");\n      const customName = \"  custom-name  \";\n      const customOptions = {\n        ...DEFAULT_STAMP_OPTIONS,\n        metaTag: { ...DEFAULT_STAMP_OPTIONS.metaTag, name: customName },\n      };\n      stampMetaTagInHtml(message, customOptions);\n      const appendedElement = appendChildSpy.mock.calls[0][0] as HTMLMetaElement;\n\n      expect(appendedElement.getAttribute(\"name\")).toBe(customName.trim());\n    });\n\n    it(\"should create a new meta tag with the personalized name when set in options.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const { head } = window.document;\n      const appendChildSpy = vi.spyOn(head, \"appendChild\");\n      const customName = \"custom-name\";\n      const customOptions = {\n        ...DEFAULT_STAMP_OPTIONS,\n        metaTag: { ...DEFAULT_STAMP_OPTIONS.metaTag, name: customName },\n      };\n      stampMetaTagInHtml(message, customOptions);\n      const appendedElement = appendChildSpy.mock.calls[0][0] as HTMLMetaElement;\n\n      expect(appendedElement.getAttribute(\"name\")).toBe(customName);\n    });\n\n    it(\"should create a new meta tag with the message as content when called.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const { head } = window.document;\n      const appendChildSpy = vi.spyOn(head, \"appendChild\");\n      stampMetaTagInHtml(message, DEFAULT_STAMP_OPTIONS);\n      const appendedElement = appendChildSpy.mock.calls[0][0] as HTMLMetaElement;\n\n      expect(appendedElement.getAttribute(\"content\")).toBe(message);\n    });\n\n    it(\"should call stampOnExistingMetaTag when there is an existing meta tag.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const { head } = window.document;\n      const existingMetaTag = window.document.createElement(\"meta\");\n      existingMetaTag.setAttribute(\"name\", DEFAULT_STAMP_OPTIONS.metaTag.name);\n      head.appendChild(existingMetaTag);\n      stampMetaTagInHtml(message, DEFAULT_STAMP_OPTIONS);\n\n      expect(existingMetaTag.getAttribute(\"content\")).toBe(message);\n    });\n  });\n});"
+      "source": "import { DEFAULT_STAMP_OPTIONS } from \"@/index.constants\";\nimport type { StampMetaTagOptions } from \"@/index.types\";\nimport { stampMetaTagInHtml, stampOnExistingMetaTag, validateMetaTagOptions } from \"@/modes/meta-tag/meta-tag\";\n\ndescribe(\"Meta Tag Mode\", () => {\n  describe(stampOnExistingMetaTag, () => {\n    it(\"should set the content attribute of the existing meta tag to the message when overwrite is true.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const existingMetaTag = document.createElement(\"meta\");\n      const options: StampMetaTagOptions = {\n        name: \"description\",\n        strictValidation: true,\n        overwrite: true,\n      };\n      const setAttributeSpy = vi.spyOn(existingMetaTag, \"setAttribute\");\n      stampOnExistingMetaTag(message, existingMetaTag, options);\n\n      expect(setAttributeSpy).toHaveBeenCalledExactlyOnceWith(\"content\", message);\n    });\n\n    it(\"should throw an error when overwrite is false and an existing meta tag is found.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const existingMetaTag = document.createElement(\"meta\");\n      existingMetaTag.setAttribute(\"name\", \"description\");\n      const options: StampMetaTagOptions = {\n        name: \"description\",\n        strictValidation: true,\n        overwrite: false,\n      };\n      const expectedError = `Meta tag with name \"${options.name}\" already exists. Use \"metaTag.overwrite\" option to replace it.`;\n\n      expect(() => stampOnExistingMetaTag(message, existingMetaTag, options)).toThrow(expectedError);\n    });\n  });\n\n  describe(validateMetaTagOptions, () => {\n    it(\"should not throw an error when strictValidation is false.\", () => {\n      const options: StampMetaTagOptions = {\n        name: \"invalid@name\",\n        strictValidation: false,\n        overwrite: true,\n      };\n\n      expect(() => validateMetaTagOptions(options.name, options)).not.toThrow();\n    });\n\n    it(\"should throw an error when name is empty and strictValidation is true.\", () => {\n      const options: StampMetaTagOptions = {\n        name: \"\",\n        strictValidation: true,\n        overwrite: true,\n      };\n      const expectedError = \"Meta tag name cannot be empty. Set 'metaTag.strictValidation' to false to skip this check.\";\n\n      expect(() => validateMetaTagOptions(options.name, options)).toThrow(expectedError);\n    });\n\n    it(\"should throw an error when name contains invalid characters and strictValidation is true.\", () => {\n      const options: StampMetaTagOptions = {\n        name: \"invalid@name\",\n        strictValidation: true,\n        overwrite: true,\n      };\n      const expectedError = `Invalid meta tag name: \"invalid@name\". Only alphanumeric characters, underscores, hyphens, colons, and periods are allowed. Set 'metaTag.strictValidation' to false to skip this check.`;\n\n      expect(() => validateMetaTagOptions(options.name, options)).toThrow(expectedError);\n    });\n  });\n\n  describe(stampMetaTagInHtml, () => {\n    it(\"should create a new meta tag with the message when there is no existing meta tag.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const { head } = window.document;\n      const appendChildSpy = vi.spyOn(head, \"appendChild\");\n      const appendedMetaTag = window.document.createElement(\"meta\");\n      appendedMetaTag.setAttribute(\"name\", DEFAULT_STAMP_OPTIONS.metaTag.name);\n      appendedMetaTag.setAttribute(\"content\", message);\n      stampMetaTagInHtml(message, DEFAULT_STAMP_OPTIONS);\n\n      expect(appendChildSpy).toHaveBeenCalledExactlyOnceWith(appendedMetaTag);\n    });\n\n    it(\"should create a new meta tag when called.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const { head } = window.document;\n      const appendChildSpy = vi.spyOn(head, \"appendChild\");\n      stampMetaTagInHtml(message, DEFAULT_STAMP_OPTIONS);\n      const appendedElement = appendChildSpy.mock.calls[0][0] as HTMLMetaElement;\n\n      expect(appendedElement.tagName).toBe(\"META\");\n    });\n\n    it(\"should trim the name of the meta tag when set in options.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const { head } = window.document;\n      const appendChildSpy = vi.spyOn(head, \"appendChild\");\n      const customName = \"  custom-name  \";\n      const customOptions = {\n        ...DEFAULT_STAMP_OPTIONS,\n        metaTag: { ...DEFAULT_STAMP_OPTIONS.metaTag, name: customName },\n      };\n      stampMetaTagInHtml(message, customOptions);\n      const appendedElement = appendChildSpy.mock.calls[0][0] as HTMLMetaElement;\n\n      expect(appendedElement.getAttribute(\"name\")).toBe(customName.trim());\n    });\n\n    it(\"should create a new meta tag with the personalized name when set in options.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const { head } = window.document;\n      const appendChildSpy = vi.spyOn(head, \"appendChild\");\n      const customName = \"custom-name\";\n      const customOptions = {\n        ...DEFAULT_STAMP_OPTIONS,\n        metaTag: { ...DEFAULT_STAMP_OPTIONS.metaTag, name: customName },\n      };\n      stampMetaTagInHtml(message, customOptions);\n      const appendedElement = appendChildSpy.mock.calls[0][0] as HTMLMetaElement;\n\n      expect(appendedElement.getAttribute(\"name\")).toBe(customName);\n    });\n\n    it(\"should create a new meta tag with the message as content when called.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const { head } = window.document;\n      const appendChildSpy = vi.spyOn(head, \"appendChild\");\n      stampMetaTagInHtml(message, DEFAULT_STAMP_OPTIONS);\n      const appendedElement = appendChildSpy.mock.calls[0][0] as HTMLMetaElement;\n\n      expect(appendedElement.getAttribute(\"content\")).toBe(message);\n    });\n\n    it(\"should call stampOnExistingMetaTag when there is an existing meta tag.\", () => {\n      const message = \"Hello Dark Jess' 🪄\";\n      const { head } = window.document;\n      const existingMetaTag = window.document.createElement(\"meta\");\n      existingMetaTag.setAttribute(\"name\", DEFAULT_STAMP_OPTIONS.metaTag.name);\n      head.appendChild(existingMetaTag);\n      stampMetaTagInHtml(message, DEFAULT_STAMP_OPTIONS);\n\n      expect(existingMetaTag.getAttribute(\"content\")).toBe(message);\n    });\n  });\n});"
     },
     "src/utils/utils.spec.ts": {
       "tests": [
