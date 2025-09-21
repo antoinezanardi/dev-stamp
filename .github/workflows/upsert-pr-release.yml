@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout GitHub repository 📡
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install pnpm 🏗️
         uses: pnpm/action-setup@v4
@@ -45,7 +45,7 @@ jobs:
       - install
     steps:
       - name: Checkout GitHub repository 📡
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           persist-credentials: false
           fetch-depth: 0
@@ -100,7 +100,7 @@ jobs:
       - get-next-release-version
     steps:
       - name: Checkout GitHub repository 📡
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Restore release changelog from cache 🥡
         uses: actions/cache/restore@v4
