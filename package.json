@@ -88,7 +88,7 @@
   "license": "MIT",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.34.5",
   "private": false,
   "publishConfig": {
     "access": "public",
