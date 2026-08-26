@@ -32,7 +32,7 @@
     "@stryker-mutator/typescript-checker": "^9.0.1",
     "@stryker-mutator/vitest-runner": "^9.0.1",
     "@stylistic/eslint-plugin": "^4.4.1",
-    "@types/node": "^22.16.4",
+    "@types/node": "^22.20.1",
     "@typescript-eslint/eslint-plugin": "^8.38.0",
     "@typescript-eslint/parser": "^8.38.0",
     "@vitest/coverage-v8": "^3.2.4",
@@ -62,7 +62,7 @@
     "src": "src"
   },
   "engines": {
-    "node": ">=22.17.1"
+    "node": ">=22.23.2"
   },
   "exports": {
     ".": {
